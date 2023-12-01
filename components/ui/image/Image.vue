@@ -19,10 +19,10 @@
       @load="onLoad"
     />
 
-    <UiSkeleton
+    <!-- <UiSkeleton
       v-if="!!loading"
       class="absolute left-0 top-0 h-full w-full rounded-none"
-    ></UiSkeleton>
+    ></UiSkeleton> -->
   </div>
 </template>
 
