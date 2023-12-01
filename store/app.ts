@@ -1,17 +1,11 @@
-import { defineStore } from 'pinia';
-
-interface AppState {
-  isLoading: boolean;
-}
+import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore({
   id: 'app',
 
-  state:(): any => ({
-    item: []
+  state: (): any => ({
+    item: [],
   }),
 
-  actions: {
-   
-  },
-});
+  actions: {},
+})
