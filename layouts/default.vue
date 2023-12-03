@@ -2,9 +2,7 @@
 
 <template>
   <LayoutDefaultHeader />
-  <main>
-    <slot />
-  </main>
+  <slot></slot>
   <LayoutDefaultFooter />
 </template>
 

@@ -1,12 +1,12 @@
 <template>
   <header
-    class="flex min-h-[80px] w-full items-center self-stretch overflow-hidden bg-[#232536] px-[10%]"
+    class="flex min-h-[80px] w-full items-center self-stretch overflow-hidden bg-[#232536] px-[5%] lg:px-[10%]"
   >
     <div
-      class="relative flex w-full items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
+      class="relative flex w-full items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
     >
       <UiImage
-        src="/paxilogo.png"
+        src="/paxi-logo.png"
         w="1"
         h="1"
         img-size="xs:40px sm:40px md:40px 40px"
@@ -14,53 +14,129 @@
         class="aspect-square w-10 max-w-full shrink-0 overflow-hidden object-contain object-center"
         preload
       ></UiImage>
+      <div class="md:hidden">
+        <Icon
+          size="30px"
+          name="mdi:menu"
+          color="white"
+          data-drawer-target="drawer-menu-mobile"
+          data-drawer-show="drawer-menu-mobile"
+          data-drawer-placement="right"
+          aria-controls="drawer-menu-mobile"
+        ></Icon>
+      </div>
       <div
-        class="my-auto flex items-start justify-between gap-5 self-center max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+        class="my-auto hidden items-start justify-between gap-5 self-center max-md:max-w-full max-md:flex-wrap max-md:justify-center md:flex"
       >
-        <template v-for="(menu, idx) in menuList" :key="idx">
-          <NuxtLink
-            :to="menu.to"
-            class="self-start whitespace-nowrap text-base font-medium leading-6 text-white"
-          >
-            {{ menu.title }}
-          </NuxtLink>
-        </template>
+        <NuxtLink
+          v-for="(menu, index) in menuList"
+          :key="index"
+          :to="menu.to"
+          class="self-start whitespace-nowrap text-base font-medium leading-6 text-white"
+        >
+          {{ menu.title }}
+        </NuxtLink>
       </div>
     </div>
   </header>
+  <!-- drawer component -->
+  <div
+    id="drawer-menu-mobile"
+    class="fixed right-0 top-0 z-40 h-screen w-80 translate-x-full overflow-y-auto bg-white p-4 transition-transform md:hidden"
+    tabindex="-1"
+    aria-labelledby="drawer-menu-mobile"
+  >
+    <h5
+      id="drawer-right-label"
+      class="mb-8 flex min-h-[62px] items-center justify-between border-b-2 border-gray-300 pb-3"
+    >
+      <div
+        class="flex items-center gap-5 text-base font-semibold text-gray-500"
+      >
+        <UiImage
+          src="/paxi-logo.png"
+          w="1"
+          h="1"
+          img-size="xs:40px sm:40px md:40px 40px"
+          alt="Logo"
+          class="aspect-square w-10 max-w-full shrink-0 overflow-hidden object-contain object-center"
+          preload
+        ></UiImage>
+        <span>Paxi Company</span>
+      </div>
+      <Icon
+        data-drawer-hide="drawer-menu-mobile"
+        aria-controls="drawer-menu-mobile"
+        color="gray"
+        class="hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+        name="mdi:close"
+        size="24px"
+      >
+        <span class="sr-only">Close menu</span>
+      </Icon>
+    </h5>
+    <div class="flex flex-col gap-5">
+      <NuxtLink
+        v-for="(menu, index) in menuList"
+        :key="index"
+        :to="menu.to"
+        class="flex w-full items-center gap-5 border-b-2 pb-4"
+      >
+        <Icon :name="menu.icon" size="24px">
+          <span class="sr-only">{{ menu.title }}</span>
+        </Icon>
+        <span class="text-base font-medium leading-6 text-black">{{
+          menu.title
+        }}</span>
+      </NuxtLink>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { initDrawers } from 'flowbite'
+
 interface IMenuList {
   title: string
   to: string
+  icon: string
 }
 const menuList: Array<IMenuList> = [
   {
     title: 'Home',
     to: '/',
+    icon: 'uil:home',
   },
   {
     title: 'Service',
     to: '/service',
+    icon: 'fluent:service-bell-20-filled',
   },
   {
     title: 'Company',
     to: '/company',
+    icon: 'mdi:domain',
   },
   {
     title: 'Career',
     to: '/career',
+    icon: 'mdi:account',
   },
   {
     title: 'Blog',
     to: '/blog',
+    icon: 'mdi:post',
   },
   {
     title: 'Contact us',
     to: '/contact',
+    icon: 'mdi:account-box',
   },
 ]
+
+onMounted(() => {
+  initDrawers()
+})
 </script>
 
 <style scoped></style>

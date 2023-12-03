@@ -4,13 +4,35 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    '@nuxtjs/eslint-module',
     '@nuxt/image',
     '@vee-validate/nuxt',
-    'nuxt-swiper',
     '@pinia/nuxt',
-    '@nuxtjs/eslint-module',
+    'nuxt-icon',
+    'nuxt-swiper',
   ],
   css: ['~/assets/css/main.css'],
+  vite: {
+    define: {
+      'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
+    },
+  },
+  imports: {
+    autoImport: true,
+  },
+  hooks: {
+    'components:dirs': (dirs) => {
+      dirs.unshift({
+        path: '~/components/ui',
+        // this is required else Nuxt will autoImport `.ts` file
+        extensions: ['.vue'],
+        // prefix for your components, eg: UiButton
+        prefix: 'Ui',
+        // prevent adding another prefix component by it's path.
+        pathPrefix: false,
+      })
+    },
+  },
   app: {
     head: {
       title: 'Paxi',
@@ -116,27 +138,6 @@ export default defineNuxtConfig({
           href: '/assets/images/favicon.png',
         },
       ],
-    },
-  },
-  vite: {
-    define: {
-      'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
-    },
-  },
-  imports: {
-    autoImport: true,
-  },
-  hooks: {
-    'components:dirs': (dirs) => {
-      dirs.unshift({
-        path: '~/components/ui',
-        // this is required else Nuxt will autoImport `.ts` file
-        extensions: ['.vue'],
-        // prefix for your components, eg: UiButton
-        prefix: 'Ui',
-        // prevent adding another prefix component by it's path.
-        pathPrefix: false,
-      })
     },
   },
 })
