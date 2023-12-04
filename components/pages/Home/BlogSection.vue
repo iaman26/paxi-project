@@ -24,21 +24,21 @@ defineProps({
       </div>
       <div class="mt-12 max-md:mt-8">
         <div
-          class="flex gap-8 max-md:flex-col max-md:items-stretch max-md:gap-0"
+          class="flex flex-col gap-8 max-md:items-stretch max-md:gap-0 lg:flex-row"
         >
           <div
             v-for="(blog, index) in blogs"
             :key="index"
-            class="flex w-6/12 items-stretch max-md:w-full max-md:flex-col"
+            class="flex w-full items-stretch max-md:flex-col"
           >
-            <div class="flex w-1/2 flex-col items-stretch max-md:w-full">
+            <div class="flex w-full flex-col items-stretch lg:w-[45%]">
               <img
                 src="/assets/images/blog-1.png"
-                class="aspect-[1.19] w-full grow overflow-hidden object-contain object-center max-md:mt-8"
+                class="aspect-1 h-[250px] w-full grow overflow-hidden object-cover object-center max-md:mt-8"
               />
             </div>
             <div
-              class="flex w-1/2 flex-col items-stretch bg-white p-8 max-md:w-full"
+              class="flex w-full flex-col items-stretch bg-white p-8 lg:w-[55%]"
             >
               <div
                 class="whitespace-nowrap text-sm font-medium leading-5 text-gray-500"

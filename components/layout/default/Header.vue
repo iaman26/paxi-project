@@ -26,7 +26,7 @@
         ></Icon>
       </div>
       <div
-        class="my-auto hidden items-start justify-between gap-5 self-center max-md:max-w-full max-md:flex-wrap max-md:justify-center md:flex"
+        class="my-auto hidden items-start justify-between gap-8 self-center max-md:max-w-full max-md:flex-wrap max-md:justify-center md:flex"
       >
         <NuxtLink
           v-for="(menu, index) in menuList"
