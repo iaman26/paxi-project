@@ -26,7 +26,7 @@ defineProps({
             Our Services
           </h2>
           <h3
-            class="mt-8 text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+            class="mt-4 text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
           >
             We build software solutions that solve client's business challenges
           </h3>

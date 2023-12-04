@@ -26,7 +26,7 @@ defineProps({
             Our expertise
           </h2>
           <h3
-            class="mt-8 text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+            class="mt-4 text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
           >
             We want to get local identification in every corner of the world in
             this era of global citizenship

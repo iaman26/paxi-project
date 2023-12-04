@@ -1,6 +1,7 @@
 <template>
   <main class="flex flex-col bg-white">
     <HomeHeaderSection />
+    <HomeAboutUsSection />
     <HomeExpertiseSection :expertises="expertises" />
     <HomeServiceSection :services="services" />
     <HomeBlogSection :blogs="blogs" />
