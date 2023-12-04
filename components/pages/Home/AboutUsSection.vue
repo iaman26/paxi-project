@@ -1,3 +1,24 @@
+<script setup lang="ts">
+const aboutUs = [
+  {
+    number: '1560+',
+    title: 'Project Delivered',
+  },
+  {
+    number: '100+',
+    title: 'Professional',
+  },
+  {
+    number: '950+',
+    title: 'Happy Client',
+  },
+  {
+    number: '10 yrs',
+    title: 'Experience',
+  },
+]
+</script>
+
 <template>
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
@@ -26,7 +47,7 @@
             class="ml-5 flex w-[46%] flex-col items-stretch max-md:ml-0 max-md:w-full"
           >
             <div
-              class="mt-3 flex flex-col items-stretch max-md:mt-10 max-md:max-w-full"
+              class="flex flex-col items-stretch max-md:mt-10 max-md:max-w-full"
             >
               <div
                 class="text-4xl font-semibold leading-[54px] text-gray-800 max-md:max-w-full"
@@ -34,7 +55,7 @@
                 The Era Of Technology.
               </div>
               <div
-                class="mt-7 text-base leading-6 text-gray-600 max-md:max-w-full"
+                class="mt-4 text-base leading-6 text-gray-600 max-md:max-w-full"
               >
                 Through True Rich Attended does no end it his mother since real
                 had half every him case in packages enquire we up ecstatic
@@ -67,94 +88,54 @@
         class="mt-16 flex w-full items-stretch justify-between gap-5 max-md:mt-10 max-md:max-w-full max-md:flex-wrap"
       >
         <div
-          class="flex items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+          class="flex items-start justify-between gap-16 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
         >
-          <div class="flex grow basis-[0%] flex-col items-center self-stretch">
+          <div
+            v-for="(us, index) in aboutUs"
+            :key="index"
+            class="flex flex-col items-center self-stretch"
+          >
             <div
               class="self-stretch whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800"
             >
-              1560+
+              {{ us.number }}
             </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a051c331563cafa12f77767c307ccc11558eb84d3a7c7d31564cab1e544c308?apiKey=d6a60cb2df8942a288161fb20fcb2421&"
-              class="mt-6 aspect-[22] w-[132px] overflow-hidden object-contain object-center"
-            />
-            <div
-              class="mt-2.5 self-stretch whitespace-nowrap text-base leading-6 text-black"
-            >
-              Project Delivered
+            <div class="mt-2 flex w-full justify-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="72"
+                height="6"
+                viewBox="0 0 72 6"
+                fill="none"
+              >
+                <rect width="71.9999" height="6.00003" fill="#444CFC" />
+                <rect
+                  x="10.4023"
+                  width="61.5953"
+                  height="6.00003"
+                  fill="#FFA155"
+                />
+                <rect
+                  x="10.0503"
+                  width="44.6449"
+                  height="5.99069"
+                  fill="#FFD3AF"
+                />
+              </svg>
             </div>
-          </div>
-          <div class="flex grow basis-[0%] flex-col items-center self-start">
             <div
-              class="self-stretch whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800"
+              class="mt-1 self-stretch whitespace-nowrap text-base leading-6 text-black"
             >
-              100+
-            </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a051c331563cafa12f77767c307ccc11558eb84d3a7c7d31564cab1e544c308?apiKey=d6a60cb2df8942a288161fb20fcb2421&"
-              class="mt-6 aspect-[15.67] w-[94px] overflow-hidden object-contain object-center"
-            />
-            <div
-              class="mt-2.5 self-stretch whitespace-nowrap text-base leading-6 text-black"
-            >
-              Professional
-            </div>
-          </div>
-          <div class="flex grow basis-[0%] flex-col items-center self-stretch">
-            <div
-              class="self-stretch whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800"
-            >
-              950+
-            </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a051c331563cafa12f77767c307ccc11558eb84d3a7c7d31564cab1e544c308?apiKey=d6a60cb2df8942a288161fb20fcb2421&"
-              class="mt-6 aspect-[16.83] w-[101px] overflow-hidden object-contain object-center"
-            />
-            <div
-              class="mt-2.5 self-stretch whitespace-nowrap text-base leading-6 text-black"
-            >
-              Happy Client
-            </div>
-          </div>
-          <div class="flex grow basis-[0%] flex-col items-center self-stretch">
-            <div
-              class="self-stretch whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800"
-            >
-              10 yrs
-            </div>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a051c331563cafa12f77767c307ccc11558eb84d3a7c7d31564cab1e544c308?apiKey=d6a60cb2df8942a288161fb20fcb2421&"
-              class="mt-3 aspect-[16.17] w-[97px] overflow-hidden object-contain object-center"
-            />
-            <div
-              class="mt-2.5 self-stretch whitespace-nowrap text-base leading-6 text-black"
-            >
-              Experience
+              {{ us.title }}
             </div>
           </div>
         </div>
-        <div class="my-auto flex items-stretch gap-5 self-center">
-          <div
-            class="grow whitespace-nowrap text-base font-medium leading-6 text-indigo-600"
-          >
-            Read about us
-          </div>
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8387e51ec8a8de2a4fc7fee7de18074197927b03db48da1d31ef2f45cf7f2e57?apiKey=d6a60cb2df8942a288161fb20fcb2421&"
-            class="aspect-[3.13] w-[25px] max-w-full shrink-0 self-start overflow-hidden stroke-black stroke-[1px] object-contain object-center"
-          />
+        <div class="my-auto self-center">
+          <UiButtonReadMore />
         </div>
       </div>
     </div>
   </section>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped></style>
