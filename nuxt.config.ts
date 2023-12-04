@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
     'nuxt-swiper',
+    'nuxt-svgo',
   ],
   css: ['~/assets/css/main.css'],
   vite: {
@@ -17,6 +18,16 @@ export default defineNuxtConfig({
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
     },
   },
+  svgo: {
+    autoImportPath: './assets/icons',
+  },
+  components: [
+    {
+      path: '~/components/pages',
+      prefix: '',
+    },
+    '~/components',
+  ],
   imports: {
     autoImport: true,
   },
@@ -24,12 +35,8 @@ export default defineNuxtConfig({
     'components:dirs': (dirs) => {
       dirs.unshift({
         path: '~/components/ui',
-        // this is required else Nuxt will autoImport `.ts` file
         extensions: ['.vue'],
-        // prefix for your components, eg: UiButton
         prefix: 'Ui',
-        // prevent adding another prefix component by it's path.
-        pathPrefix: false,
       })
     },
   },
