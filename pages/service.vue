@@ -2,12 +2,12 @@
   <main class="flex flex-col bg-white">
     <HomeHeaderSection />
     <HomeAboutUsSection />
-    <CommonExpertiseSection :expertises="expertises" />
+    <HomeExpertiseSection :expertises="expertises" />
     <HomeServiceSection :services="services" />
-    <CommonProcessSection :processes="processes" />
+    <HomeProcessSection :processes="processes" />
     <HomeTestimonialSection :testimonials="testimonials" />
-    <CommonBlogSection :blogs="blogs" />
-    <CommonCTASection />
+    <HomeBlogSection :blogs="blogs" />
+    <HomeCTASection />
   </main>
 </template>
 
