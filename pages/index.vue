@@ -4,6 +4,7 @@
     <HomeAboutUsSection />
     <HomeExpertiseSection :expertises="expertises" />
     <HomeServiceSection :services="services" />
+    <HomeProcessSection :processes="processes" />
     <HomeTestimonialSection :testimonials="testimonials" />
     <HomeBlogSection :blogs="blogs" />
     <HomeCTASection />
@@ -91,6 +92,44 @@ const testimonials = [
       'https://cdn.builder.io/api/v1/image/assets/TEMP/9ad61dbd369c51059b34ff440b5f5dccce09c83f8dd533c3346ab09411b6d159?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&width=100',
     role: 'Director, Company',
     logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74b9ddd298313a0c6710191af1a079d680e3b874ced29c454ed2b0f2189be2cb?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&',
+  },
+]
+const processes = [
+  {
+    icon: 'PaxiHeadphone',
+    title: 'Discover',
+    description:
+      'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
+  },
+  {
+    icon: 'PaxiHeadphone',
+    title: 'Designing',
+    description:
+      'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
+  },
+  {
+    icon: 'PaxiHeadphone',
+    title: 'Development',
+    description:
+      'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
+  },
+  {
+    icon: 'PaxiHeadphone',
+    title: 'Testing',
+    description:
+      'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
+  },
+  {
+    icon: 'PaxiHeadphone',
+    title: 'Deployment',
+    description:
+      'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
+  },
+  {
+    icon: 'PaxiHeadphone',
+    title: 'Maintenance',
+    description:
+      'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
 ]
 </script>
