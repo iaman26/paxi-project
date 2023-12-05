@@ -1,5 +1,28 @@
 <template>
   <footer>
+    <div class="mb-8 px-[5%] lg:px-[10%]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="37"
+        height="34"
+        viewBox="0 0 37 34"
+        fill="none"
+      >
+        <path
+          d="M-0.00012207 13.8518V0H36.7199V13.8518H-0.00012207Z"
+          fill="#666DFF"
+        />
+        <path
+          d="M-0.00012207 33.9999V23.9258H10.1295V33.9999H-0.00012207Z"
+          fill="#666DFF"
+        />
+        <path
+          d="M-0.00012207 23.9259V0H24.0578V23.9259H-0.00012207Z"
+          fill="#FFA155"
+        />
+        <path d="M10.1288 13.8518V0H24.0571V13.8518H10.1288Z" fill="#FFD3AF" />
+      </svg>
+    </div>
     <div
       class="footer-top flex w-full flex-col px-[5%] max-md:max-w-full lg:flex-row lg:px-[10%]"
     >
@@ -83,16 +106,11 @@
           </div>
         </div>
         <div class="absolute bottom-0 right-0 flex gap-2.5">
-          <UiImage
-            src="/assets/images/Shapes-2.svg"
-            w="1"
-            h="1"
-            img-size="xs:40px sm:40px md:40px 40px"
-            alt="Logo"
-            class="aspect-[3.57] w-[50px] max-w-full shrink-0 overflow-hidden object-contain object-center"
-            preload
-          ></UiImage>
           <NuxtLink to="/contact" class="flex items-center gap-2">
+            <div class="flex h-3 w-12 items-center">
+              <div class="h-full w-1/3 bg-[#FFD3AF]"></div>
+              <div class="h-full w-2/3 bg-[#666DFF]"></div>
+            </div>
             <div
               class="my-auto self-center text-base font-medium leading-6 text-gray-800"
             >

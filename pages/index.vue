@@ -77,7 +77,7 @@ const testimonials = [
   },
   {
     content:
-      'lorem ipsum dolor sit amet, consectetur adipiscing elit in in part of the content of this document and the content of this document has been a great partner to work with. I have been a customer now for the past',
+      'Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!',
     name: 'Johnny Andro',
     avatar:
       'https://cdn.builder.io/api/v1/image/assets/TEMP/9ad61dbd369c51059b34ff440b5f5dccce09c83f8dd533c3346ab09411b6d159?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&width=100',
@@ -86,7 +86,7 @@ const testimonials = [
   },
   {
     content:
-      'lorem ipsum dolor sit amet, consectetur adipis. lorem ipsum dolor sit amet, consectetur adipis. lorem ipsum dolor sit amet, consectetur adipis',
+      'Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!',
     name: 'Johnny Andro',
     avatar:
       'https://cdn.builder.io/api/v1/image/assets/TEMP/9ad61dbd369c51059b34ff440b5f5dccce09c83f8dd533c3346ab09411b6d159?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&width=100',

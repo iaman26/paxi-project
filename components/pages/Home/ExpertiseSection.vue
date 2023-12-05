@@ -5,7 +5,16 @@ interface IExpertiseProps {
   description: string
 }
 defineProps({
-  expertises: Array as PropType<IExpertiseProps[]>,
+  expertises: {
+    type: Array as PropType<IExpertiseProps[]>,
+    default: () => [
+      {
+        icon: '',
+        title: '',
+        description: '',
+      },
+    ],
+  },
 })
 </script>
 
@@ -13,7 +22,7 @@ defineProps({
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-slate-100 px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:my-10">
+    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
       <div
         class="flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0 md:justify-between"
       >

@@ -5,7 +5,7 @@
     <div
       class="grow whitespace-nowrap text-base font-medium leading-6 text-indigo-600"
     >
-      Read More
+      <slot></slot>
     </div>
     <Icon name="cil:arrow-right" color="black"></Icon>
   </div>

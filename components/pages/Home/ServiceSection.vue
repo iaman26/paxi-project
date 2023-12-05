@@ -5,7 +5,16 @@ interface IServiceProps {
   description: string
 }
 defineProps({
-  services: Array as PropType<IServiceProps[]>,
+  services: {
+    type: Array as PropType<IServiceProps[]>,
+    default: () => [
+      {
+        icon: '',
+        title: '',
+        description: '',
+      },
+    ],
+  },
 })
 </script>
 
@@ -13,12 +22,12 @@ defineProps({
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-orange-100 px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:my-10">
+    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
       <div
         class="flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0 md:justify-between"
       >
         <div
-          class="flex w-[80%] flex-col items-stretch max-md:ml-0 max-md:w-full xl:w-[45%]"
+          class="flex w-[80%] flex-col items-stretch max-md:ml-0 max-md:w-full xl:w-[55%]"
         >
           <h2
             class="whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
@@ -60,7 +69,7 @@ defineProps({
               {{ service.description }}
             </p>
             <div class="mt-9 flex items-stretch gap-4">
-              <UiButtonReadMore />
+              <UiButtonReadMore>Read more</UiButtonReadMore>
             </div>
           </div>
         </div>

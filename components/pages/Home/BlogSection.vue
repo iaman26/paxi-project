@@ -5,7 +5,16 @@ interface IBlogsProps {
   date: string
 }
 defineProps({
-  blogs: Array as PropType<IBlogsProps[]>,
+  blogs: {
+    type: Array as PropType<IBlogsProps[]>,
+    default: () => [
+      {
+        img: '',
+        title: '',
+        date: '',
+      },
+    ],
+  },
 })
 </script>
 
@@ -13,7 +22,7 @@ defineProps({
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-slate-100 px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:my-10">
+    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
       <div class="flex w-full flex-col">
         <div class="h-4 w-4 bg-indigo-500"></div>
         <h2
@@ -48,7 +57,7 @@ defineProps({
               <h2 class="mt-2 text-2xl font-semibold leading-9 text-gray-800">
                 {{ blog.title }}
               </h2>
-              <UiButtonReadMore class="mt-7" />
+              <UiButtonReadMore class="mt-7">Read more</UiButtonReadMore>
             </div>
           </div>
         </div>

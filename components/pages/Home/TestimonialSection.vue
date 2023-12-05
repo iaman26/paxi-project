@@ -11,7 +11,18 @@ interface ITestimonialProps {
   role: string
 }
 defineProps({
-  testimonials: Array as PropType<ITestimonialProps[]>,
+  testimonials: {
+    type: Array as PropType<ITestimonialProps[]>,
+    default: () => [
+      {
+        logo: '',
+        content: '',
+        name: '',
+        avatar: '',
+        role: '',
+      },
+    ],
+  },
 })
 </script>
 
@@ -19,7 +30,7 @@ defineProps({
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-slate-50 px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:my-10">
+    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
       <div
         class="flex justify-between gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0"
       >
@@ -97,10 +108,10 @@ defineProps({
               <swiper-slide
                 v-for="(testimonial, index) in testimonials"
                 :key="index"
-                class="flex flex-col items-stretch bg-white px-10 py-12 max-md:max-w-full max-md:px-5"
+                class="flex flex-col items-stretch bg-white px-10 pb-10 pt-12 max-md:max-w-full max-md:px-5"
               >
                 <p
-                  class="mt-1.5 text-2xl font-semibold leading-9 text-gray-800 max-md:max-w-full"
+                  class="text-2xl font-semibold leading-9 text-gray-800 max-md:max-w-full"
                 >
                   {{ testimonial.content }}
                 </p>

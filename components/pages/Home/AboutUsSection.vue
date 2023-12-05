@@ -23,7 +23,7 @@ const aboutUs = [
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:my-10">
+    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
       <h2
         class="whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
       >
@@ -31,10 +31,10 @@ const aboutUs = [
       </h2>
       <div class="mt-4 max-md:max-w-full">
         <div
-          class="flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0"
+          class="flex justify-between gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0"
         >
           <div
-            class="flex w-[54%] flex-col items-stretch max-md:ml-0 max-md:w-full"
+            class="flex w-[55%] flex-col items-stretch max-md:ml-0 max-md:w-full"
           >
             <h3
               class="text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
@@ -44,7 +44,7 @@ const aboutUs = [
             </h3>
           </div>
           <div
-            class="ml-5 flex w-[46%] flex-col items-stretch max-md:ml-0 max-md:w-full"
+            class="ml-5 flex w-[40%] flex-col items-stretch max-md:ml-0 max-md:w-full"
           >
             <div
               class="flex flex-col items-stretch max-md:mt-10 max-md:max-w-full"
@@ -133,7 +133,7 @@ const aboutUs = [
           </div>
         </div>
         <div class="my-auto self-center max-md:mt-10 max-md:self-end">
-          <UiButtonReadMore />
+          <UiButtonReadMore>Read about us</UiButtonReadMore>
         </div>
       </div>
     </div>

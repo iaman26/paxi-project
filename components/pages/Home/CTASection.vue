@@ -4,8 +4,10 @@
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:my-10">
-      <div class="relative bg-indigo-500 py-24 max-md:max-w-full max-md:py-12">
+    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
+      <div
+        class="relative mr-5 bg-indigo-500 py-24 max-md:mr-3 max-md:max-w-full max-md:py-12 max-sm:mr-0"
+      >
         <div
           class="absolute left-0 top-0 aspect-[1.21] max-w-full overflow-hidden object-contain object-center"
         >
@@ -55,6 +57,13 @@
               class="w-full bg-white p-5 text-base font-medium leading-6 text-gray-800 placeholder:text-[#232536] placeholder:opacity-40 lg:w-4/5"
             />
           </div>
+        </div>
+        <div
+          class="absolute -right-5 top-0 flex h-full w-5 flex-col max-md:-right-3 max-md:w-3 max-sm:hidden"
+        >
+          <div class="h-2/6 bg-[#FFA155]"></div>
+          <div class="h-3/6 bg-[#FFD3AF]"></div>
+          <div class="h-1/6 bg-[#444CFC]"></div>
         </div>
       </div>
     </div>
