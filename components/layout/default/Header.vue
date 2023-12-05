@@ -95,44 +95,7 @@
 
 <script setup lang="ts">
 import { initDrawers } from 'flowbite'
-
-interface IMenuList {
-  title: string
-  to: string
-  icon: string
-}
-const menuList: Array<IMenuList> = [
-  {
-    title: 'Home',
-    to: '/',
-    icon: 'uil:home',
-  },
-  {
-    title: 'Service',
-    to: '/service',
-    icon: 'fluent:service-bell-20-filled',
-  },
-  {
-    title: 'Company',
-    to: '/company',
-    icon: 'mdi:domain',
-  },
-  {
-    title: 'Career',
-    to: '/career',
-    icon: 'mdi:account',
-  },
-  {
-    title: 'Blog',
-    to: '/blog',
-    icon: 'mdi:post',
-  },
-  {
-    title: 'Contact us',
-    to: '/contact',
-    icon: 'mdi:account-box',
-  },
-]
+import { menuList } from '@/constants'
 
 onMounted(() => {
   initDrawers()

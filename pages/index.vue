@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col bg-white">
+  <main>
     <HomeHeaderSection />
     <HomeAboutUsSection />
     <CommonExpertiseSection :expertises="expertises" />

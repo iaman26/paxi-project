@@ -158,6 +158,8 @@
 </template>
 
 <script setup lang="ts">
+import { menuList } from '@/constants'
+
 const socialMediaLinks = [
   {
     icon: 'mdi:facebook',
@@ -177,11 +179,6 @@ const socialMediaLinks = [
   },
 ]
 
-interface IMenuList {
-  title: string
-  to: string
-}
-
 interface IServiceList {
   title: string
   to: string
@@ -191,28 +188,7 @@ interface IResourcesList {
   title: string
   to: string
 }
-const menuList: Array<IMenuList> = [
-  {
-    title: 'Home',
-    to: '/',
-  },
-  {
-    title: 'Service',
-    to: '/service',
-  },
-  {
-    title: 'Company',
-    to: '/company',
-  },
-  {
-    title: 'Career',
-    to: '/career',
-  },
-  {
-    title: 'Blog',
-    to: '/blog',
-  },
-]
+
 const serviceList: Array<IServiceList> = [
   {
     title: 'Technical support',
