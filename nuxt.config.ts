@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     'nuxt-svgo',
   ],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/index.css'],
   vite: {
     define: {
       'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   },
   svgo: {
     autoImportPath: './assets/icons',
+    componentPrefix: 'paxi',
   },
   components: [
     {

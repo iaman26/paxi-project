@@ -27,7 +27,7 @@ const aboutUs = [
       <h2
         class="whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
       >
-        Our expertise
+        About us
       </h2>
       <div class="mt-4 max-md:max-w-full">
         <div
@@ -66,7 +66,7 @@ const aboutUs = [
         </div>
       </div>
       <div
-        class="relative mr-3 mt-12 flex items-stretch justify-between gap-3 max-md:mt-10 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+        class="relative mr-5 mt-12 flex items-stretch justify-between gap-3 max-md:mt-5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
       >
         <img
           src="/assets/images/about-1.png"
@@ -78,29 +78,31 @@ const aboutUs = [
           src="/assets/images/about-3.png"
           class="aspect-1 w-full grow basis-[0%] overflow-hidden object-contain object-center"
         />
-        <div class="absolute -right-3 top-0 flex h-1/2 w-3 flex-col">
+        <div
+          class="absolute -right-5 top-0 flex h-full w-5 flex-col max-md:hidden"
+        >
           <div class="h-2/6 bg-[#FFA155]"></div>
           <div class="h-3/6 bg-[#FFD3AF]"></div>
           <div class="h-1/6 bg-[#444CFC]"></div>
         </div>
       </div>
       <div
-        class="mt-16 flex w-full items-stretch justify-between gap-5 max-md:mt-10 max-md:max-w-full max-md:flex-wrap"
+        class="mt-16 flex w-full items-stretch justify-between gap-5 max-md:mt-5 max-md:max-w-full max-md:flex-col"
       >
         <div
-          class="flex items-start justify-between gap-16 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+          class="flex items-start justify-between gap-16 max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:gap-x-0 max-md:gap-y-5"
         >
           <div
             v-for="(us, index) in aboutUs"
             :key="index"
-            class="flex flex-col items-center self-stretch"
+            class="flex flex-col items-center self-stretch max-md:w-1/2 max-md:justify-center max-md:text-center"
           >
             <div
               class="self-stretch whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800"
             >
               {{ us.number }}
             </div>
-            <div class="mt-2 flex w-full justify-start">
+            <div class="mt-2 flex w-full justify-start max-md:justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="72"
@@ -130,7 +132,7 @@ const aboutUs = [
             </div>
           </div>
         </div>
-        <div class="my-auto self-center">
+        <div class="my-auto self-center max-md:mt-10 max-md:self-end">
           <UiButtonReadMore />
         </div>
       </div>
