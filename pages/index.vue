@@ -13,19 +13,19 @@
 <script setup lang="ts">
 const expertises = [
   {
-    icon: 'SvgoShuttle',
+    icon: 'PaxiShuttle',
     title: 'On Time Delivery',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him.',
   },
   {
-    icon: 'SvgoShuttle',
+    icon: 'PaxiSetting',
     title: 'Best Quality',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him.',
   },
   {
-    icon: 'SvgoShuttle',
+    icon: 'PaxiSupport',
     title: 'Support Assist',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him.',
@@ -33,19 +33,19 @@ const expertises = [
 ]
 const services = [
   {
-    icon: 'SvgoShuttle',
+    icon: 'PaxiHeadphone',
     title: 'Technical support',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent names when it comes to world-class service',
   },
   {
-    icon: 'SvgoShuttle',
+    icon: 'PaxiSetting',
     title: 'Testing Management',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent names when it comes to world-class service',
   },
   {
-    icon: 'SvgoShuttle',
+    icon: 'PaxiWebDevelopment',
     title: 'Development',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent names when it comes to world-class service',

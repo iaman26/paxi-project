@@ -47,7 +47,9 @@ defineProps({
             <div
               class="flex aspect-square w-[47px] max-w-full shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#FFE6D2] object-contain object-center"
             >
-              <Icon :name="service.icon"></Icon>
+              <div class="h-6 w-6">
+                <Icon :name="service.icon"></Icon>
+              </div>
             </div>
             <h3
               class="mt-6 self-stretch whitespace-nowrap text-base font-semibold leading-7 text-black"

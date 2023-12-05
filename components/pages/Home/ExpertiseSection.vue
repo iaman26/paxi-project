@@ -54,7 +54,9 @@ defineProps({
                 <div
                   class="flex aspect-square w-[47px] max-w-full shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#FFE6D2] object-contain object-center"
                 >
-                  <Icon :name="expertise.icon"></Icon>
+                  <div class="h-6 w-6">
+                    <Icon :name="expertise.icon"></Icon>
+                  </div>
                 </div>
                 <div class="mt-2 flex grow basis-[0%] flex-col items-stretch">
                   <h3
