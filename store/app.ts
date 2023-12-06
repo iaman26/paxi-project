@@ -1,11 +1,15 @@
 import { defineStore } from 'pinia'
+import { menuList } from '~/constants'
 
-export const useAppStore = defineStore({
-  id: 'app',
+export const useAppStore = defineStore('app', () => {
+  const route = useRoute()
+  const currentMenu = ref(
+    menuList.findIndex((menu) => menu.path === route.path) || 0
+  )
+  const getCurrentMenu = computed(() => currentMenu.value)
 
-  state: (): any => ({
-    item: [],
-  }),
-
-  actions: {},
+  const handleClickMenu = (index: number) => {
+    currentMenu.value = index
+  }
+  return { currentMenu, getCurrentMenu, handleClickMenu }
 })

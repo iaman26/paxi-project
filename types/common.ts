@@ -1,5 +1,5 @@
 export type MenuType = {
   title: string
-  to: string
+  path: string
   icon: string
 }

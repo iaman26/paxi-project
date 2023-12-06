@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { initDrawers } from 'flowbite'
+import { menuList } from '@/constants'
+import { useAppStore } from '@/store/app'
+
+const appStore = useAppStore()
+const { getCurrentMenu } = storeToRefs(appStore)
+const { handleClickMenu } = appStore
+
+onMounted(() => {
+  initDrawers()
+})
+</script>
+
 <template>
   <header
     class="flex min-h-[80px] w-full items-center self-stretch overflow-hidden bg-[#232536] px-[5%] lg:px-[10%]"
@@ -31,8 +45,10 @@
         <NuxtLink
           v-for="(menu, index) in menuList"
           :key="index"
-          :to="menu.to"
-          class="self-start whitespace-nowrap text-base font-medium leading-6 text-white"
+          :to="menu.path"
+          class="self-start whitespace-nowrap text-base font-medium leading-6 text-white opacity-60"
+          :class="{ 'opacity-100': getCurrentMenu === index }"
+          @click="handleClickMenu(index)"
         >
           {{ menu.title }}
         </NuxtLink>
@@ -48,7 +64,7 @@
   >
     <h5
       id="drawer-right-label"
-      class="mb-8 flex min-h-[62px] items-center justify-between border-b-2 border-gray-300 pb-3"
+      class="flex min-h-[64px] items-center justify-between border-b-2 border-gray-300 pb-3"
     >
       <div
         class="flex items-center gap-5 text-base font-semibold text-gray-500"
@@ -75,31 +91,25 @@
         <span class="sr-only">Close menu</span>
       </Icon>
     </h5>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col">
       <NuxtLink
         v-for="(menu, index) in menuList"
         :key="index"
-        :to="menu.to"
-        class="flex w-full items-center gap-5 border-b-2 pb-4"
+        :to="menu.path"
+        class="flex w-full items-center gap-4 border-b-2 py-4"
+        @click="handleClickMenu(index)"
       >
         <Icon :name="menu.icon" size="24px">
           <span class="sr-only">{{ menu.title }}</span>
         </Icon>
-        <span class="text-base font-medium leading-6 text-black">{{
-          menu.title
-        }}</span>
+        <span
+          class="text-base font-medium leading-6 text-black"
+          :class="{ 'text-yellow-400': getCurrentMenu === index }"
+          >{{ menu.title }}</span
+        >
       </NuxtLink>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { initDrawers } from 'flowbite'
-import { menuList } from '@/constants'
-
-onMounted(() => {
-  initDrawers()
-})
-</script>
 
 <style scoped></style>

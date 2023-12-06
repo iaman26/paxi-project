@@ -1,39 +1,39 @@
-import { MenuType } from '@/types'
+import { type MenuType } from '@/types'
 
 export const menuList: Array<MenuType> = [
   {
     title: 'Home',
-    to: '/',
+    path: '/',
     icon: 'uil:home',
   },
   {
     title: 'Service',
-    to: '/service',
+    path: '/service',
     icon: 'fluent:service-bell-20-filled',
   },
   {
     title: 'Company',
-    to: '/company',
+    path: '/company',
     icon: 'mdi:domain',
   },
   {
     title: 'Career',
-    to: '/career',
+    path: '/career',
     icon: 'mdi:account',
   },
   {
     title: 'Blog',
-    to: '/blog',
+    path: '/blog',
     icon: 'mdi:post',
   },
   {
     title: 'Contact Us',
-    to: '/contact',
+    path: '/contact',
     icon: 'mdi:account-box',
   },
   {
     title: 'Privacy Policy',
-    to: '/privacy-policy',
+    path: '/privacy-policy',
     icon: 'carbon:policy',
   },
 ]
