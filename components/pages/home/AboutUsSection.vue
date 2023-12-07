@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 const aboutUs = [
   {
     number: '1560+',
@@ -68,16 +71,32 @@ const aboutUs = [
       <div
         class="relative mr-5 mt-12 flex items-stretch justify-between gap-3 max-md:mt-5 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
       >
-        <img
-          src="/assets/images/about-1.png"
-          class="aspect-1 w-full grow basis-[0%] overflow-hidden object-contain object-center"
-        /><img
-          src="/assets/images/about-2.png"
-          class="aspect-1 w-full grow basis-[0%] overflow-hidden object-contain object-center"
-        /><img
-          src="/assets/images/about-3.png"
-          class="aspect-1 w-full grow basis-[0%] overflow-hidden object-contain object-center"
-        />
+        <swiper
+          :slides-per-view="1"
+          :space-between="20"
+          :breakpoints="{
+            '640': {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            '1024': {
+              slidesPerView: 3,
+              spaceBetween: 12,
+            },
+          }"
+          :pagination="{
+            type: 'progressbar',
+          }"
+          :modules="[Pagination]"
+          class="mySwiper"
+        >
+          <swiper-slide v-for="(_, index) in 3" :key="index">
+            <img
+              src="/assets/images/about-1.png"
+              class="aspect-1 w-full grow overflow-hidden object-cover object-center"
+            />
+          </swiper-slide>
+        </swiper>
         <div
           class="absolute -right-5 top-0 flex h-full w-5 flex-col max-md:hidden"
         >

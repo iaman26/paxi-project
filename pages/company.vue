@@ -1,5 +1,6 @@
 <template>
   <main>
+    <CompanyHeaderSection />
     <CommonExpertiseSection :expertises="expertises" />
     <CommonCTASection />
   </main>
