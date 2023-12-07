@@ -39,20 +39,20 @@ onMounted(() => {
           aria-controls="drawer-menu-mobile"
         ></Icon>
       </div>
-      <div
+      <nav
         class="my-auto hidden items-start justify-between gap-8 self-center max-md:max-w-full max-md:flex-wrap max-md:justify-center md:flex"
       >
         <NuxtLink
           v-for="(menu, index) in menuList"
           :key="index"
           :to="menu.path"
-          class="self-start whitespace-nowrap text-base font-medium leading-6 text-white opacity-60"
-          :class="{ 'opacity-100': getCurrentMenu === index }"
+          class="self-start whitespace-nowrap text-base font-medium leading-6 text-white"
+          :class="{ 'opacity-60': getCurrentMenu !== index }"
           @click="handleClickMenu(index)"
         >
           {{ menu.title }}
         </NuxtLink>
-      </div>
+      </nav>
     </div>
   </header>
   <!-- drawer component -->
@@ -91,7 +91,7 @@ onMounted(() => {
         <span class="sr-only">Close menu</span>
       </Icon>
     </h5>
-    <div class="flex flex-col">
+    <nav class="flex flex-col">
       <NuxtLink
         v-for="(menu, index) in menuList"
         :key="index"
@@ -103,12 +103,12 @@ onMounted(() => {
           <span class="sr-only">{{ menu.title }}</span>
         </Icon>
         <span
-          class="text-base font-medium leading-6 text-black"
-          :class="{ 'text-yellow-400': getCurrentMenu === index }"
+          class="text-base font-medium leading-6 text-yellow-400"
+          :class="{ 'text-black': getCurrentMenu !== index }"
           >{{ menu.title }}</span
         >
       </NuxtLink>
-    </div>
+    </nav>
   </div>
 </template>
 

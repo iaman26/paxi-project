@@ -1,20 +1,3 @@
-<template>
-  <main>
-    <ServiceHeaderSection
-      :features="features"
-      @scroll-to-feature="handleScrollToFeature"
-    />
-    <CommonProcessSection :processes="processes" />
-    <ServiceFeatureSection
-      v-for="(feature, index) in features"
-      :key="index"
-      ref="featureRefs"
-      :feature="feature"
-      :index="index"
-    />
-    <CommonCTASection />
-  </main>
-</template>
 <script setup lang="ts">
 import type FeatureSectionVue from '~/components/pages/service/FeatureSection.vue'
 
@@ -109,5 +92,23 @@ const handleScrollToFeature = (index: number) => {
   element?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
+
+<template>
+  <main>
+    <ServiceHeaderSection
+      :features="features"
+      @scroll-to-feature="handleScrollToFeature"
+    />
+    <CommonProcessSection :processes="processes" />
+    <ServiceFeatureSection
+      v-for="(feature, index) in features"
+      :key="index"
+      ref="featureRefs"
+      :feature="feature"
+      :index="index"
+    />
+    <CommonCTASection />
+  </main>
+</template>
 
 <style scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="mt-24 max-md:mt-12">
     <div class="mb-8 px-[5%] lg:px-[10%]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
