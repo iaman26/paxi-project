@@ -54,7 +54,7 @@ import 'swiper/css/pagination'
           </p>
         </div>
         <div
-          class="relative mr-5 mt-16 flex items-stretch justify-between gap-3 max-md:mt-12 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
+          class="relative mt-16 flex items-stretch justify-between gap-3 max-md:mt-12 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
         >
           <swiper
             :slides-per-view="1"

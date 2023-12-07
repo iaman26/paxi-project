@@ -1,8 +1,11 @@
 <template>
   <main>
     <CompanyHeaderSection />
+    <CompanyOurStorySection />
     <CommonExpertiseSection :expertises="expertises" />
-    <CommonCTASection />
+    <CompanyVisionSection />
+    <CompanyTeamSection />
+    <CommonCTASection class="pt-0" />
   </main>
 </template>
 

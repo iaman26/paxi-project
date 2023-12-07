@@ -27,7 +27,7 @@ defineProps({
         class="flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0 md:justify-between"
       >
         <div
-          class="flex w-[56%] flex-col items-stretch max-md:ml-0 max-md:w-full lg:w-[45%]"
+          class="flex w-[56%] flex-col items-stretch max-md:w-full lg:w-[45%]"
         >
           <h2
             class="whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
