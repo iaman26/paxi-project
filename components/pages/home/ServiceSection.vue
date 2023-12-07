@@ -69,7 +69,7 @@ defineProps({
               {{ service.description }}
             </p>
             <div class="mt-9 flex items-stretch gap-4">
-              <UiButtonReadMore>Read more</UiButtonReadMore>
+              <UiButtonRedirect>Read more</UiButtonRedirect>
             </div>
           </div>
         </div>

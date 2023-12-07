@@ -57,7 +57,7 @@ defineProps({
               <h2 class="mt-2 text-2xl font-semibold leading-9 text-gray-800">
                 {{ blog.title }}
               </h2>
-              <UiButtonReadMore class="mt-7">Read more</UiButtonReadMore>
+              <UiButtonRedirect class="mt-7">Read more</UiButtonRedirect>
             </div>
           </div>
         </div>

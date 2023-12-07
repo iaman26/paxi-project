@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex w-fit items-center gap-4">
+  <div class="flex w-fit cursor-pointer items-center gap-4">
     <div
       class="grow whitespace-nowrap text-base font-medium leading-6 text-indigo-600"
     >

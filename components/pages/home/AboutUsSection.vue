@@ -152,7 +152,7 @@ const aboutUs = [
           </div>
         </div>
         <div class="my-auto self-center max-md:mt-10 max-md:self-end">
-          <UiButtonReadMore>Read about us</UiButtonReadMore>
+          <UiButtonRedirect>Read about us</UiButtonRedirect>
         </div>
       </div>
     </div>
