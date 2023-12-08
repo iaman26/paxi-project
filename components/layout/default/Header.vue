@@ -103,8 +103,11 @@ onMounted(() => {
           <span class="sr-only">{{ menu.title }}</span>
         </Icon>
         <span
-          class="text-base font-medium leading-6 text-yellow-400"
-          :class="{ 'text-black': getCurrentMenu !== index }"
+          class="text-base font-medium leading-6"
+          :class="{
+            'text-black': getCurrentMenu !== index,
+            'text-yellow-400': getCurrentMenu === index,
+          }"
           >{{ menu.title }}</span
         >
       </NuxtLink>

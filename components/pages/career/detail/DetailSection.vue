@@ -11,20 +11,20 @@ onMounted(() => {
 
 <template>
   <section
-    class="flex w-full flex-col items-center justify-center self-stretch px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
+    class="mt-10 flex w-full flex-col items-center justify-center self-stretch bg-[#ECF8F9] max-md:max-w-full lg:mt-0 lg:bg-white lg:px-[10%] lg:py-12"
   >
-    <div class="w-full bg-[#ECF8F9] py-5 lg:py-16">
+    <div class="w-full bg-[#ECF8F9] lg:my-12">
       <div class="relative flex justify-center">
         <ul
           id="default-tab"
-          class="flex w-1/2 justify-around"
+          class="flex w-full gap-10 overflow-x-auto px-[5%] md:justify-around md:overflow-hidden xl:w-2/3 xl:justify-around"
           data-tabs-toggle="#details-tab-content"
           role="tablist"
         >
           <li v-for="(tab, index) in tabs" :key="index" role="presentation">
             <button
               :id="`${tab}-tab`"
-              class="pb-8 text-2xl font-semibold leading-9"
+              class="py-4 text-xl font-semibold leading-9 xl:py-8 xl:text-2xl"
               :class="{
                 'text-indigo-600': index === currentTab,
                 'relative z-10 border-b-4 border-b-indigo-600':
@@ -46,7 +46,10 @@ onMounted(() => {
           class="absolute bottom-0 w-full border-b-4 border-b-[#E0F1F2]"
         ></div>
       </div>
-      <div id="details-tab-content" class="mx-auto w-8/12 py-24">
+      <div
+        id="details-tab-content"
+        class="mx-auto w-full p-[5%] xl:w-8/12 xl:py-24"
+      >
         <div
           id="details"
           class=""
