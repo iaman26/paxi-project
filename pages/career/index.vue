@@ -3,6 +3,25 @@ const handleScrollToPosition = () => {}
 
 const positions = [
   {
+    slug: 'full-stack-developer',
+    title: 'Full Stack Developer',
+    position: 'Bengaluru',
+    jobType: 'Full time',
+    minSalary: '$10K',
+    maxSalary: '$40K',
+    year: '4 to 5 Yrs Exp',
+  },
+  {
+    slug: 'full-stack-developer',
+    title: 'Full Stack Developer',
+    position: 'Bengaluru',
+    jobType: 'Full time',
+    minSalary: '$10K',
+    maxSalary: '$40K',
+    year: '4 to 5 Yrs Exp',
+  },
+  {
+    slug: 'full-stack-developer',
     title: 'Full Stack Developer',
     position: 'Bengaluru',
     jobType: 'Full time',
@@ -17,6 +36,7 @@ const positions = [
     minSalary: '$10K',
     maxSalary: '$40K',
     year: '4 to 5 Yrs Exp',
+    slug: 'full-stack-developer',
   },
   {
     title: 'Full Stack Developer',
@@ -25,6 +45,7 @@ const positions = [
     minSalary: '$10K',
     maxSalary: '$40K',
     year: '4 to 5 Yrs Exp',
+    slug: 'full-stack-developer',
   },
   {
     title: 'Full Stack Developer',
@@ -33,6 +54,7 @@ const positions = [
     minSalary: '$10K',
     maxSalary: '$40K',
     year: '4 to 5 Yrs Exp',
+    slug: 'full-stack-developer',
   },
   {
     title: 'Full Stack Developer',
@@ -41,6 +63,7 @@ const positions = [
     minSalary: '$10K',
     maxSalary: '$40K',
     year: '4 to 5 Yrs Exp',
+    slug: 'full-stack-developer',
   },
   {
     title: 'Full Stack Developer',
@@ -49,6 +72,7 @@ const positions = [
     minSalary: '$10K',
     maxSalary: '$40K',
     year: '4 to 5 Yrs Exp',
+    slug: 'full-stack-developer',
   },
   {
     title: 'Full Stack Developer',
@@ -57,22 +81,7 @@ const positions = [
     minSalary: '$10K',
     maxSalary: '$40K',
     year: '4 to 5 Yrs Exp',
-  },
-  {
-    title: 'Full Stack Developer',
-    position: 'Bengaluru',
-    jobType: 'Full time',
-    minSalary: '$10K',
-    maxSalary: '$40K',
-    year: '4 to 5 Yrs Exp',
-  },
-  {
-    title: 'Full Stack Developer',
-    position: 'Bengaluru',
-    jobType: 'Full time',
-    minSalary: '$10K',
-    maxSalary: '$40K',
-    year: '4 to 5 Yrs Exp',
+    slug: 'full-stack-developer',
   },
 ]
 

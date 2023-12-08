@@ -28,7 +28,7 @@ defineEmits(['scrollToPosition'])
           </p>
         </div>
         <div
-          class="animate-bg bg-career-bg mt-8 flex w-full justify-center bg-clip-text text-[90px] font-semibold leading-[80px] text-transparent sm:mt-12 sm:text-[150px] sm:font-bold sm:leading-[120px] md:text-[180px] md:leading-[150px] lg:mt-14 lg:text-[220px] lg:leading-[180px] xl:mt-16 xl:text-[250px] xl:leading-[200px]"
+          class="mt-8 flex w-full animate-bg justify-center bg-career-bg bg-clip-text text-[90px] font-semibold leading-[80px] text-transparent sm:mt-12 sm:text-[150px] sm:font-bold sm:leading-[120px] md:text-[180px] md:leading-[150px] lg:mt-14 lg:text-[220px] lg:leading-[180px] xl:mt-16 xl:text-[250px] xl:leading-[200px]"
         >
           Careers
         </div>

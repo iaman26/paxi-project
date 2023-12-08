@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface IPositionProps {
+  slug: string
   title: string
   position: string
   jobType: string
@@ -12,6 +13,7 @@ defineProps({
     type: Array as PropType<IPositionProps[]>,
     default: () => [
       {
+        slug: '',
         title: '',
         position: '',
         jobType: '',
@@ -53,7 +55,9 @@ defineProps({
               {{ position.year }}
             </h3>
           </div>
-          <UiButtonRedirect class="mt-12">Apply Now</UiButtonRedirect>
+          <UiButtonRedirect class="mt-12">
+            <NuxtLink :to="`/career/${position.slug}`">Apply Now</NuxtLink>
+          </UiButtonRedirect>
         </div>
       </div>
     </div>

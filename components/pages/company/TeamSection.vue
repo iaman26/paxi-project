@@ -68,8 +68,8 @@ const socialMediaLinks = [
                 </div>
                 <div class="mt-6 flex items-center gap-6">
                   <a
-                    v-for="(social, index) in socialMediaLinks"
-                    :key="index"
+                    v-for="(social, socialIndex) in socialMediaLinks"
+                    :key="socialIndex"
                     :href="social.href"
                   >
                     <Icon size="20px" color="white" :name="social.icon" />
