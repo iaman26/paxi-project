@@ -1,15 +1,19 @@
 <script setup lang="ts">
-const blogs = [
+import type { IBlogProp } from '~/types'
+
+const blogs: IBlogProp[] = [
   {
-    img: '/assets/images/blog-1.png',
-    title: 'Today’s best design trends for digital products',
+    slug: 'blog-1',
+    img: '/assets/images/blog-3.png',
+    title: 'Breaking the code How did we build our Figma plugin ',
     avatar: '/assets/images/customer-1.png',
     author: 'Andrew Jonson',
-    date: 'Jan 19, 2021',
+    date: '27th January 2021',
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page.',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
   },
   {
+    slug: 'blog-1',
     img: '/assets/images/blog-2.png',
     title: 'Today’s best design trends for digital products',
     avatar: '/assets/images/customer-2.png',
@@ -19,6 +23,7 @@ const blogs = [
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
+    slug: 'blog-1',
     img: '/assets/images/blog-1.png',
     title: 'Today’s best design trends for digital products',
     avatar: '/assets/images/customer-3.png',
@@ -28,6 +33,7 @@ const blogs = [
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
+    slug: 'blog-1',
     img: '/assets/images/blog-2.png',
     title: 'Today’s best design trends for digital products',
     avatar: '/assets/images/customer-2.png',
@@ -37,6 +43,7 @@ const blogs = [
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
+    slug: 'blog-1',
     img: '/assets/images/blog-2.png',
     title: 'Today’s best design trends for digital products',
     avatar: '/assets/images/customer-2.png',
@@ -46,6 +53,7 @@ const blogs = [
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
+    slug: 'blog-1',
     img: '/assets/images/blog-2.png',
     title: 'Today’s best design trends for digital products',
     avatar: '/assets/images/customer-2.png',
@@ -59,7 +67,7 @@ const blogs = [
 
 <template>
   <main>
-    <BlogHeaderSection :blogs="blogs" />
+    <BlogHeaderSection :blogs="blogs" :trending="blogs[0]" />
     <BlogRecentSection :blogs="blogs" />
     <BlogAllPostsSection :blogs="blogs" />
     <CommonCTASection />

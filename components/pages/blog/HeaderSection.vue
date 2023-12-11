@@ -12,8 +12,21 @@ defineProps({
         author: '',
         img: '',
         description: '',
+        slug: '',
       },
     ],
+  },
+  trending: {
+    type: Object as () => IBlogProp,
+    default: () => ({
+      avatar: '',
+      title: '',
+      date: '',
+      author: '',
+      img: '',
+      description: '',
+      slug: '',
+    }),
   },
 })
 </script>
@@ -37,14 +50,14 @@ defineProps({
             <h2
               class="text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
             >
-              Breaking the code How did we build our Figma plugin
+              {{ trending.title }}
             </h2>
             <p class="text-base leading-6 text-gray-600 max-md:max-w-full">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              Maker is a decentralized.
+              {{ trending.description }}
             </p>
-            <UiButtonRedirect> Read More </UiButtonRedirect>
+            <UiButtonRedirect>
+              <NuxtLink :to="`/blog/${trending.slug}`"> Read More </NuxtLink>
+            </UiButtonRedirect>
           </div>
           <div class="my-6 flex items-center lg:my-10">
             <div class="h-8 w-8">
@@ -57,18 +70,19 @@ defineProps({
             </div>
             <span
               class="border-r border-gray-200 px-3 text-base leading-6 text-gray-800 xl:px-3"
-              >Andrew Jonson</span
             >
+              {{ trending.author }}
+            </span>
             <time
               class="ml-3 text-base leading-6 text-gray-800 opacity-60"
               datetime="2021-01-27"
-              >Posted on 27th January 2021</time
-            >
+              >Posted on {{ trending.date }}
+            </time>
           </div>
           <div class="relative">
             <img
               loading="lazy"
-              src="/assets/images/blog-3.png"
+              :src="useAsset(trending.img)"
               class="aspect-auto w-full self-stretch overflow-hidden object-contain object-center pr-2 lg:pr-3"
             />
             <div class="absolute right-0 top-0 flex h-full w-2 flex-col lg:w-3">

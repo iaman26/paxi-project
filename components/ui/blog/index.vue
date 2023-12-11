@@ -26,6 +26,7 @@ defineProps({
       description: '',
       author: '',
       img: '',
+      slug: '',
     }),
   },
 })

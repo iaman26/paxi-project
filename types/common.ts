@@ -11,4 +11,5 @@ export interface IBlogProp {
   author: string
   description: string
   img: string
+  slug: string
 }

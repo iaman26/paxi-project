@@ -1,5 +1,7 @@
 <template>
   <main>
+    <BlogDetailHeaderSection />
+    <BlogDetailPostSection />
     <CommonCTASection />
   </main>
 </template>

@@ -3,8 +3,9 @@ import { menuList } from '~/constants'
 
 export const useAppStore = defineStore('app', () => {
   const route = useRoute()
+  const baseRoute = '/' + route.fullPath.split('/')[1]
   const currentMenu = ref(
-    menuList.findIndex((menu) => menu.path === route.path) || 0
+    menuList.findIndex((menu) => menu.path === baseRoute) || 0
   )
   const getCurrentMenu = computed(() => currentMenu.value)
 

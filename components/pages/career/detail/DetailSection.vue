@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { initTabs } from 'flowbite'
+import { mockContent } from '@/constants'
 
 const currentTab = ref(0)
 const tabs = ['details', 'requirements', 'responsibilities']
@@ -56,40 +57,7 @@ onMounted(() => {
           role="tabpanel"
           aria-labelledby="details-tab"
         >
-          <div
-            class="self-stretch text-base leading-6 text-black max-md:max-w-full"
-          >
-            <p>
-              Create and edit video content for multi-platform use and
-              distribution for social media channels (Facebook, Youtube,
-              Instagram, Snapchat, IGTV, Facebook Stories and Instagram
-              Stories).
-            </p>
-            <p>
-              Design & Create highly engaging industry-related content in both
-              photo, gif & video format
-            </p>
-            <p>Publish Posts on various social media channels</p>
-            <p>
-              Promote content on social networks and monitor engagement (e.g.
-              comments and shares)
-            </p>
-            <p>Research industry-related topics</p>
-            <p>Editing audio and sound design on projects</p>
-            <p>
-              Engage in opportunities to develop original content and concepts
-              for web and mobile
-            </p>
-            <p>
-              Create motion graphics and animations using 2D and 3D applications
-              for marketing and promotional usage.
-            </p>
-            <p>
-              Manage the day-to-day handling of all social media channels such
-              as LinkedIn, Facebook, Twitter, Pinterest, Instagram, Tiktok and
-              YouTube, adapting content to suit different channels
-            </p>
-          </div>
+          <div class="flex flex-col gap-6" v-html="mockContent"></div>
         </div>
         <div
           id="requirements"
@@ -97,40 +65,7 @@ onMounted(() => {
           role="tabpanel"
           aria-labelledby="requirements-tab"
         >
-          <div
-            class="self-stretch text-base leading-6 text-black max-md:max-w-full"
-          >
-            <p>
-              Create and edit video content for multi-platform use and
-              distribution for social media channels (Facebook, Youtube,
-              Instagram, Snapchat, IGTV, Facebook Stories and Instagram
-              Stories).
-            </p>
-            <p>
-              Design & Create highly engaging industry-related content in both
-              photo, gif & video format
-            </p>
-            <p>Publish Posts on various social media channels</p>
-            <p>
-              Promote content on social networks and monitor engagement (e.g.
-              comments and shares)
-            </p>
-            <p>Research industry-related topics</p>
-            <p>Editing audio and sound design on projects</p>
-            <p>
-              Engage in opportunities to develop original content and concepts
-              for web and mobile
-            </p>
-            <p>
-              Create motion graphics and animations using 2D and 3D applications
-              for marketing and promotional usage.
-            </p>
-            <p>
-              Manage the day-to-day handling of all social media channels such
-              as LinkedIn, Facebook, Twitter, Pinterest, Instagram, Tiktok and
-              YouTube, adapting content to suit different channels
-            </p>
-          </div>
+          <div class="flex flex-col gap-6" v-html="mockContent"></div>
         </div>
         <div
           id="responsibilities"
@@ -138,40 +73,7 @@ onMounted(() => {
           role="tabpanel"
           aria-labelledby="responsibilities-tab"
         >
-          <div
-            class="self-stretch text-base leading-6 text-black max-md:max-w-full"
-          >
-            <p>
-              Create and edit video content for multi-platform use and
-              distribution for social media channels (Facebook, Youtube,
-              Instagram, Snapchat, IGTV, Facebook Stories and Instagram
-              Stories).
-            </p>
-            <p>
-              Design & Create highly engaging industry-related content in both
-              photo, gif & video format
-            </p>
-            <p>Publish Posts on various social media channels</p>
-            <p>
-              Promote content on social networks and monitor engagement (e.g.
-              comments and shares)
-            </p>
-            <p>Research industry-related topics</p>
-            <p>Editing audio and sound design on projects</p>
-            <p>
-              Engage in opportunities to develop original content and concepts
-              for web and mobile
-            </p>
-            <p>
-              Create motion graphics and animations using 2D and 3D applications
-              for marketing and promotional usage.
-            </p>
-            <p>
-              Manage the day-to-day handling of all social media channels such
-              as LinkedIn, Facebook, Twitter, Pinterest, Instagram, Tiktok and
-              YouTube, adapting content to suit different channels
-            </p>
-          </div>
+          <div class="flex flex-col gap-6" v-html="mockContent"></div>
         </div>
       </div>
     </div>
