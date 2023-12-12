@@ -56,11 +56,13 @@ const socialMediaLinks = [
               <div
                 class="relative flex flex-col items-start justify-end lg:pb-12 lg:pl-12"
               >
-                <h1
-                  class="whitespace-nowrap text-2xl font-semibold leading-9 text-white max-md:mt-10"
-                >
-                  Javena Melo
-                </h1>
+                <NuxtLink to="/team/javena-melo">
+                  <h1
+                    class="whitespace-nowrap text-2xl font-semibold leading-9 text-white max-md:mt-10"
+                  >
+                    Javena Melo
+                  </h1>
+                </NuxtLink>
                 <div
                   class="mt-2 whitespace-nowrap text-sm font-medium leading-5 text-white"
                 >

@@ -42,7 +42,7 @@ defineProps({
           >
             <div class="flex w-full flex-col items-stretch lg:w-[45%]">
               <img
-                src="/assets/images/blog-1.png"
+                :src="useAsset(blog.img)"
                 class="aspect-1 h-[250px] w-full grow overflow-hidden object-cover object-center max-md:mt-8"
               />
             </div>
