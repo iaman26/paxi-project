@@ -33,14 +33,14 @@
             </svg>
           </div>
         </div>
-        <h1
+        <h2
           class="w-fit text-5xl font-semibold leading-[58px] text-gray-800 max-md:text-4xl max-md:leading-[54px]"
         >
           Privacy Policy
-        </h1>
-        <div class="mt-2 w-fit text-base leading-6 text-gray-800 opacity-60">
+        </h2>
+        <p class="mt-2 w-fit text-base leading-6 text-gray-800 opacity-60">
           Last Updated on 27th January 2021
-        </div>
+        </p>
       </div>
     </div>
   </section>

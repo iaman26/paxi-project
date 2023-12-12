@@ -13,7 +13,7 @@ const features = [
       'Best in class tech support for your company. We become your tech backbone',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/public/feature-1.png',
+    image: '/assets/images/feature-1.png',
   },
   {
     featureName: 'Development',
@@ -21,7 +21,7 @@ const features = [
       'Bring your ideas to reality with certified team of developers, working with latest technologies ',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/public/feature-2.png',
+    image: '/assets/images/feature-2.png',
   },
   {
     featureName: 'AWS/Azure ',
@@ -29,14 +29,14 @@ const features = [
       'We help you deploy, manage and secure your application on leading web services',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/public/feature-3.png',
+    image: '/assets/images/feature-3.png',
   },
   {
     featureName: 'Consulting',
     title: 'Get advice from world class professionals',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/public/feature-4.png',
+    image: '/assets/images/feature-4.png',
   },
   {
     featureName: 'Information Technology',
@@ -44,7 +44,7 @@ const features = [
       'We want to get local identification in every corner of the world in this era of global citizenship.',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/public/feature-5.png',
+    image: '/assets/images/feature-5.png',
   },
 ]
 

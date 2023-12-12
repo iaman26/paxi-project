@@ -58,7 +58,7 @@ defineExpose({ featureRef })
           class="h-auto w-[520px] pb-24 max-lg:pb-16 max-md:w-full max-md:pb-12"
         >
           <img
-            src="public/feature-2.png"
+            :src="useAsset(feature.image)"
             class="w-full grow overflow-hidden object-contain object-center"
           />
         </div>
