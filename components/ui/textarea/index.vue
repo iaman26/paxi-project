@@ -12,6 +12,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  placeholder: {
+    type: String,
+    default: '',
+  },
 })
 const emit = defineEmits(['update:modelValue'])
 
@@ -29,8 +33,8 @@ const value = computed({
   <div class="relative w-full">
     <textarea
       v-model="value"
-      class="border-blue-gray-200 text-blue-gray-700 placeholder-shown:border-blue-gray-200 disabled:bg-blue-gray-50 peer h-full w-full border-b bg-transparent pb-1.5 pt-4 font-sans text-sm font-normal outline outline-0 transition-all focus:border-gray-500 focus:outline-0 disabled:border-0"
-      placeholder=" "
+      class="text-blue-gray-700 placeholder-shown:border-blue-gray-200 disabled:bg-blue-gray-50 peer h-full w-full border-b border-l-0 border-r-0 border-t-0 border-gray-200 bg-transparent pb-1.5 pt-4 font-sans text-sm font-normal outline outline-0 transition-all focus:border-gray-500 focus:shadow-none focus:outline-0 focus:ring-white disabled:border-0"
+      :placeholder="placeholder"
       :name="name"
     >
     </textarea>
