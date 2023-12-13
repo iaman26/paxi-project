@@ -3,6 +3,13 @@
   height: inherit !important;
   margin-bottom: 0 !important;
 }
+
+.icon {
+  width: inherit !important;
+  height: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
 /* 
 
 h2 {

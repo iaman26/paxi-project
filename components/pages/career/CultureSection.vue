@@ -53,8 +53,12 @@ defineProps({
           <div
             class="flex aspect-square h-12 w-12 max-w-full shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#FFE6D2] object-contain object-center"
           >
-            <div class="h-6 w-6">
-              <Icon :name="culture.icon"></Icon>
+            <div class="flex h-6 w-6 items-center justify-center">
+              <Icon
+                :name="culture.icon"
+                filled
+                class="flex items-center justify-center"
+              ></Icon>
             </div>
           </div>
           <div class="flex flex-col">

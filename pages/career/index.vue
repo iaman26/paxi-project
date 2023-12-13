@@ -110,37 +110,37 @@ const positions = [
 
 const cultures = [
   {
-    icon: 'PaxiShuttle',
+    icon: '😷',
     title: 'Covid-19 insurance',
     description:
       'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
   },
   {
-    icon: 'PaxiShuttle',
+    icon: '⏱',
     title: 'Flexible working time',
     description:
       'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
   },
   {
-    icon: 'PaxiShuttle',
+    icon: '🏡',
     title: 'Work from home',
     description:
       'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
   },
   {
-    icon: 'PaxiShuttle',
+    icon: '🎉',
     title: 'Annual retreats',
     description:
       'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
   },
   {
-    icon: 'PaxiShuttle',
+    icon: '💰',
     title: 'Learning stipend',
     description:
       'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
   },
   {
-    icon: 'PaxiShuttle',
+    icon: '💪',
     title: 'Learning stipend',
     description:
       'Through True Rich Attended does no end it his mother since real had halfdoes no end it',
