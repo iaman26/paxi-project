@@ -74,7 +74,7 @@ onMounted(() => {
           w="1"
           h="1"
           img-size="xs:40px sm:40px md:40px 40px"
-          alt="Logo"
+          alt="Paxi Company"
           class="aspect-square w-10 max-w-full shrink-0 overflow-hidden object-contain object-center"
           preload
         ></UiImage>

@@ -33,7 +33,7 @@ defineProps({
 </script>
 
 <template>
-  <div
+  <article
     class="flex w-full"
     :class="{
       'flex-col': dimension === 'vertical',
@@ -49,45 +49,51 @@ defineProps({
         'lg:w-[45%]': dimension === 'horizontal',
       }"
     >
-      <img
-        :src="useAsset(blog.img)"
-        class="aspect-1 h-[250px] w-full grow overflow-hidden object-cover object-center"
-      />
+      <UiImage
+        :src="blog.img"
+        class="h-[250px] w-full grow overflow-hidden object-cover object-center"
+        :alt="`Image ${blog.title}`"
+      >
+      </UiImage>
     </div>
     <div
       class="flex flex-col items-stretch p-8 max-md:p-6"
       :class="{
         'w-full': dimension === 'vertical',
-        'lg:w-[55%]': dimension === 'horizontal',
+        'justify-between lg:w-[55%]': dimension === 'horizontal',
       }"
     >
-      <h2
-        class="text-2xl font-semibold leading-9 text-gray-800 max-md:max-w-full"
-      >
-        {{ blog.title }}
-      </h2>
-      <p v-if="isShowDesc" class="mt-4 text-base leading-6 text-gray-800">
-        {{ blog.description }}
-      </p>
+      <header>
+        <h4
+          class="text-2xl font-semibold leading-9 text-gray-800 max-md:max-w-full"
+        >
+          <NuxtLink :to="`blog/${blog.slug}`">{{ blog.title }}</NuxtLink>
+        </h4>
+        <p v-if="isShowDesc" class="mt-4 text-base leading-6 text-gray-800">
+          {{ blog.description }}
+        </p>
+      </header>
       <div class="mt-4 flex items-center gap-3">
-        <img
-          :src="useAsset(blog.avatar)"
+        <UiImage
+          :src="blog.avatar"
           class="aspect-square w-8 max-w-full shrink-0 overflow-hidden rounded-[50%] object-contain object-center"
-        />
+          :alt="`Avatar ${blog.title}`"
+        >
+        </UiImage>
         <div class="flex flex-col">
-          <div class="whitespace-nowrap text-base leading-6 text-gray-800">
+          <p class="whitespace-nowrap text-base leading-6 text-gray-800">
             {{ blog.author }}
-          </div>
+          </p>
           <time
             class="mt-1 whitespace-nowrap text-sm font-medium leading-5 text-gray-800 opacity-60"
-            datetime="2021-01-19"
+            :datetime="blog.date"
           >
-            {{ blog.date }}
+            {{ formatDateWithSuffix(blog.date) }}
           </time>
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <style scoped></style>

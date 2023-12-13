@@ -18,11 +18,6 @@
       :alt="props.alt"
       @load="onLoad"
     />
-
-    <!-- <UiSkeleton
-      v-if="!!loading"
-      class="absolute left-0 top-0 h-full w-full rounded-none"
-    ></UiSkeleton> -->
   </div>
 </template>
 

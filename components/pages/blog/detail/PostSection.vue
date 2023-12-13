@@ -1,5 +1,21 @@
 <script setup lang="ts">
 import { mockContent } from '@/constants'
+import type { IBlogProp } from '~/types'
+
+defineProps({
+  blog: {
+    type: Object as () => IBlogProp,
+    default: () => ({
+      avatar: '',
+      title: '',
+      date: '',
+      author: '',
+      img: '',
+      description: '',
+      slug: '',
+    }),
+  },
+})
 </script>
 
 <template>
@@ -9,13 +25,15 @@ import { mockContent } from '@/constants'
     <div class="w-full lg:mt-12">
       <div class="flex flex-col">
         <div class="relative w-full">
-          <img
-            src="/assets/images/vision.png"
-            alt=""
-            class="w-full overflow-hidden object-contain object-center"
-          />
+          <UiImage
+            :src="blog.img"
+            w="5"
+            h="2"
+            preload
+            :alt="blog.title"
+          ></UiImage>
           <div
-            class="absolute -bottom-4 -right-0 flex h-4 w-80 max-md:-bottom-3 max-md:h-3"
+            class="absolute -bottom-4 -right-0 flex h-4 w-60 max-md:-bottom-3 max-md:h-3 xl:w-80"
           >
             <div class="w-2/6 bg-[#FFA155]"></div>
             <div class="w-3/6 bg-[#FFD3AF]"></div>
@@ -23,7 +41,7 @@ import { mockContent } from '@/constants'
           </div>
         </div>
         <div
-          class="mx-auto flex w-full flex-col gap-6 p-[5%] xl:w-8/12 xl:py-24"
+          class="mx-auto mt-16 flex w-full flex-col gap-6 text-base leading-6 text-gray-800 lg:mt-28 lg:px-[5%] xl:w-8/12"
           v-html="mockContent"
         ></div>
       </div>

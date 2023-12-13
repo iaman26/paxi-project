@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-swiper',
     'nuxt-svgo',
+    'dayjs-nuxt',
   ],
   css: ['~/assets/css/index.css'],
   vite: {

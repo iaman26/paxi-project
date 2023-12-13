@@ -1,64 +1,75 @@
 <script setup lang="ts">
 import type { IBlogProp } from '~/types'
 
+definePageMeta({
+  title: 'Blog',
+})
+
+useSeoMeta({
+  title: 'Blog',
+  ogTitle: 'Blog',
+  description: `Breaking the code How did we build our Figma plugin`,
+  ogDescription: `Breaking the code How did we build our Figma plugin`,
+})
+
 const blogs: IBlogProp[] = [
   {
     slug: 'blog-1',
-    img: '/assets/images/blog-3.png',
+    img: '/blog-3.png',
     title: 'Breaking the code How did we build our Figma plugin ',
-    avatar: '/assets/images/customer-1.png',
+    avatar: '/customer-1.png',
     author: 'Andrew Jonson',
-    date: '27th January 2021',
+    date: '2021-01-27',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The Maker is a decentralized. We aim to attain the.',
   },
   {
     slug: 'blog-1',
-    img: '/assets/images/blog-2.png',
+    img: '/blog-2.png',
     title: 'Today’s best design trends for digital products',
-    avatar: '/assets/images/customer-2.png',
+    avatar: '/customer-2.png',
     author: 'Mathew Jasele',
-    date: 'Jan 20, 2021',
+    date: '2021-03-28',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
     slug: 'blog-1',
-    img: '/assets/images/blog-1.png',
+    img: '/blog-1.png',
     title: 'Today’s best design trends for digital products',
-    avatar: '/assets/images/customer-3.png',
+    avatar: '/customer-3.png',
     author: 'Hussen Abakas',
-    date: 'Jan 21, 2021',
+    date: '2023-02-1',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
     slug: 'blog-1',
-    img: '/assets/images/blog-2.png',
+    img: '/blog-2.png',
     title: 'Today’s best design trends for digital products',
-    avatar: '/assets/images/customer-2.png',
+    avatar: '/customer-2.png',
     author: 'Husky',
-    date: 'Jan 22, 2021',
+    date: '2024-01-01',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
     slug: 'blog-1',
-    img: '/assets/images/blog-2.png',
+    img: '/blog-2.png',
     title: 'Today’s best design trends for digital products',
-    avatar: '/assets/images/customer-2.png',
+    avatar: '/customer-2.png',
     author: 'Bitbull',
-    date: 'Jan 22, 2021',
+    date: '2023-12-9',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
   {
     slug: 'blog-1',
-    img: '/assets/images/blog-2.png',
+    img: '/blog-2.png',
     title: 'Today’s best design trends for digital products',
-    avatar: '/assets/images/customer-2.png',
+    avatar: '/customer-2.png',
     author: 'Alaska',
-    date: 'Jan 22, 2021',
+    date: '2022-01-01',
     description:
       'It is a long established fact that a reader will be distracted by the readable content of a page.',
   },
