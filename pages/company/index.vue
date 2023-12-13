@@ -1,14 +1,3 @@
-<template>
-  <main>
-    <CompanyHeaderSection />
-    <CompanyOurStorySection />
-    <CommonExpertiseSection :expertises="expertises" />
-    <CompanyVisionSection />
-    <CompanyTeamSection />
-    <CommonCTASection class="pt-0" />
-  </main>
-</template>
-
 <script setup lang="ts">
 const expertises = [
   {
@@ -31,5 +20,16 @@ const expertises = [
   },
 ]
 </script>
+
+<template>
+  <main>
+    <CompanyHeaderSection />
+    <CompanyOurStorySection />
+    <CommonExpertiseSection :expertises="expertises" />
+    <CompanyVisionSection />
+    <CompanyTeamSection />
+    <CommonCTASection class="pt-0" />
+  </main>
+</template>
 
 <style scoped></style>

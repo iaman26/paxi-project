@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { mockContent } from '@/constants'
 import type { IBlogProp } from '~/types'
+import { mockContent } from '@/constants'
 
 defineProps({
   blog: {
@@ -49,4 +49,4 @@ defineProps({
   </section>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped></style>

@@ -10,7 +10,7 @@ import 'swiper/css/pagination'
   >
     <div class="w-full lg:mt-12">
       <div class="flex flex-col">
-        <div class="flex w-full items-center justify-between">
+        <div class="flex w-full items-start justify-between">
           <div class="h-6 w-6 bg-[#FFD3AF]"></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

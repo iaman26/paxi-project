@@ -56,7 +56,7 @@ const socialMediaLinks = [
               <div
                 class="relative flex flex-col items-start justify-end lg:pb-12 lg:pl-12"
               >
-                <NuxtLink to="/team/javena-melo">
+                <NuxtLink :to="`/company/member/javena-melo`">
                   <h1
                     class="whitespace-nowrap text-2xl font-semibold leading-9 text-white max-md:mt-10"
                   >

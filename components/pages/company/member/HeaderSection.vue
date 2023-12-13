@@ -21,11 +21,14 @@ defineProps({
       <div class="mx-auto flex w-full flex-col items-stretch md:w-1/2 lg:w-1/3">
         <div class="flex flex-col">
           <div class="mx-auto">
-            <img
-              loading="lazy"
-              :src="useAsset(member.img)"
+            <UiImage
+              :src="member.img"
+              w="1"
+              h="1"
               class="md:w-50 aspect-square w-48 max-w-full self-center overflow-hidden rounded-[50%] object-contain object-center xl:w-80"
-            />
+              preload
+              :alt="member.name"
+            ></UiImage>
           </div>
           <h3
             class="mt-8 self-center whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800 xl:mt-12"

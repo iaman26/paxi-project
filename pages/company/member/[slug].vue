@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const member = {
-  img: '/assets/images/team-1.png',
+  img: '/team-1.png',
   name: 'Javena Melo',
   role: 'CEO',
   description:
@@ -11,6 +11,15 @@ const member = {
     instagram: '#',
   },
 }
+
+useHead({
+  titleTemplate: member.name,
+  meta: [
+    { property: 'og:title', content: `${member.name}` },
+    { property: 'og:description', content: `${member.description}` },
+    { property: 'og:image', content: `${member.img}` },
+  ],
+})
 
 const blogs = [
   {
@@ -28,7 +37,7 @@ const blogs = [
 
 <template>
   <main>
-    <TeamDetailHeaderSection :member="member" />
+    <CompanyMemberHeaderSection :member="member" />
     <CommonBlogSection :blogs="blogs" />
   </main>
 </template>
