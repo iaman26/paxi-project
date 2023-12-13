@@ -24,10 +24,17 @@ defineProps({
     ],
   },
 })
+
+const positionSectionRef = ref(null)
+
+defineExpose({
+  positionSectionRef,
+})
 </script>
 
 <template>
   <section
+    ref="positionSectionRef"
     class="flex w-full flex-col items-center justify-center self-stretch px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
     <div class="w-full bg-[#ECF8F9] p-5 lg:p-16">
@@ -38,22 +45,22 @@ defineProps({
           class="flex flex-col justify-between bg-white p-5 md:px-8 md:pb-5 md:pt-8 lg:pb-8 lg:pl-12 lg:pt-12"
         >
           <div class="flex flex-col">
-            <h1
+            <h5
               class="whitespace-nowrap text-base font-semibold leading-7 text-gray-800"
             >
               {{ position.title }}
-            </h1>
-            <h2
+            </h5>
+            <h6
               class="mt-5 whitespace-nowrap text-base leading-6 text-gray-800"
             >
               {{ position.position }} · {{ position.jobType }}
-            </h2>
-            <h3
+            </h6>
+            <h6
               class="mt-2.5 whitespace-nowrap text-base leading-6 text-gray-800"
             >
               {{ position.minSalary }} - {{ position.maxSalary }} ·
               {{ position.year }}
-            </h3>
+            </h6>
           </div>
           <UiButtonRedirect class="mt-12">
             <NuxtLink :to="`/career/${position.slug}`">Apply Now</NuxtLink>

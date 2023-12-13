@@ -18,7 +18,7 @@ const socials = {
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="w-full lg:mt-12">
+    <div class="w-full lg:my-12">
       <div class="flex flex-col lg:flex-row lg:justify-between">
         <div class="flex w-full flex-col gap-6 lg:w-1/2 xl:w-2/3">
           <div class="h-6 w-6 bg-orange-200"></div>

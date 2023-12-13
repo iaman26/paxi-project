@@ -22,7 +22,7 @@ defineProps({
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="relative w-full lg:mt-12">
+    <div class="relative w-full lg:my-12">
       <div class="absolute right-0 top-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"

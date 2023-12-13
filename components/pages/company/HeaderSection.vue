@@ -8,7 +8,7 @@ import 'swiper/css/pagination'
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="w-full lg:mt-12">
+    <div class="w-full lg:my-12">
       <div class="flex flex-col">
         <div class="flex w-full items-start justify-between">
           <div class="h-6 w-6 bg-[#FFD3AF]"></div>

@@ -1,5 +1,28 @@
 <script setup lang="ts">
-const handleScrollToPosition = () => {}
+import type PositionSectionVue from '~/components/pages/career/PositionSection.vue'
+
+interface PositionSectionInstance
+  extends InstanceType<typeof PositionSectionVue> {
+  applySectionRef: HTMLElement | null
+}
+
+const positionSectionRef = ref<PositionSectionInstance>()
+
+const handleScrollToPosition = () => {
+  const element = positionSectionRef.value!.positionSectionRef
+  element?.scrollIntoView({ behavior: 'smooth' })
+}
+
+definePageMeta({
+  title: 'Career',
+})
+
+useSeoMeta({
+  title: 'Career',
+  ogTitle: 'Career',
+  description: `We hired people who are Always Passionate about what they do`,
+  ogDescription: `We hired people who are Always Passionate about what they do`,
+})
 
 const positions = [
   {
@@ -128,7 +151,7 @@ const cultures = [
 <template>
   <main>
     <CareerHeaderSection @scroll-to-position="handleScrollToPosition" />
-    <CareerPositionSection :positions="positions" />
+    <CareerPositionSection ref="positionSectionRef" :positions="positions" />
     <CareerCultureSection :cultures="cultures" />
     <CommonCTASection />
   </main>
