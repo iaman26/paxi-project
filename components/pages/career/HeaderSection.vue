@@ -6,7 +6,7 @@ defineEmits(['scrollToPosition'])
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="relative my-12 w-full max-md:mb-0 max-md:mt-10">
+    <div class="relative w-full lg:mt-12">
       <div class="flex flex-col">
         <div
           class="mx-auto flex w-full flex-col justify-start gap-4 text-left lg:w-2/3 lg:justify-center lg:text-center xl:w-1/2"

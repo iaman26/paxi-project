@@ -4,7 +4,7 @@
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white py-12 max-md:max-w-full"
   >
-    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
+    <div class="w-full lg:mt-12">
       <div
         class="mb-10 w-full px-[5%] lg:mb-16 lg:w-2/3 lg:px-[10%] lg:pr-0 xl:w-[65%]"
       >

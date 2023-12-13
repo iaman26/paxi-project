@@ -22,7 +22,7 @@ defineProps({
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-[#FAFAFC] px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
+    <div class="w-full lg:mt-12">
       <div class="mb-10 w-full lg:mb-16 lg:w-[80%] xl:w-[60%]">
         <h2
           class="w-full self-stretch text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"

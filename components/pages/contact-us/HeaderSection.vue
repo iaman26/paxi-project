@@ -5,31 +5,40 @@ const form = reactive({
   subject: '',
   message: '',
 })
+
+const socials = {
+  facebook: '#',
+  twitter: '#',
+  instagram: '#',
+  linkedin: '#',
+}
 </script>
 
 <template>
   <section
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
-    <div class="my-12 w-full max-md:mb-0 max-md:mt-10">
+    <div class="w-full lg:mt-12">
       <div class="flex flex-col lg:flex-row lg:justify-between">
         <div class="flex w-full flex-col gap-6 lg:w-1/2 xl:w-2/3">
           <div class="h-6 w-6 bg-orange-200"></div>
-          <div
-            class="self-stretch whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
-          >
-            CONTACT US
-          </div>
-          <div
-            class="self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
-          >
-            Have a Question ?<br />Let’s Get in Touch with us 👋
-          </div>
-          <div
-            class="self-stretch text-base leading-6 text-gray-800 max-md:max-w-full"
-          >
-            Fill up the Form and ou team will get back to within 24 hrs
-          </div>
+          <header class="flex w-full flex-col gap-6">
+            <h1
+              class="self-stretch whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
+            >
+              CONTACT US
+            </h1>
+            <h2
+              class="self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+            >
+              Have a Question ?<br />Let’s Get in Touch with us 👋
+            </h2>
+            <p
+              class="self-stretch text-base leading-6 text-gray-800 max-md:max-w-full"
+            >
+              Fill up the Form and ou team will get back to within 24 hrs
+            </p>
+          </header>
           <form class="flex w-full flex-col md:w-1/2">
             <UiInput
               v-model="form.name"
@@ -54,7 +63,7 @@ const form = reactive({
           </form>
         </div>
         <aside
-          class="relative mt-8 flex h-fit w-full flex-col items-stretch bg-indigo-500 p-8 md:p-12 lg:w-1/3"
+          class="relative mt-12 flex h-fit w-full flex-col items-stretch bg-indigo-500 p-8 md:p-12 lg:mt-4 lg:w-1/3"
         >
           <div
             class="absolute -top-3 right-0 flex h-3 w-32 lg:-top-4 lg:h-4 lg:w-32"
@@ -70,20 +79,20 @@ const form = reactive({
             <div class="h-3/6 w-full bg-[#FFD3AF]"></div>
             <div class="h-1/6 w-full bg-[#444CFC]"></div>
           </div>
-          <small
-            class="whitespace-nowrap text-sm font-medium leading-5 text-white"
+          <h4
+            class="whitespace-nowrap text-sm font-medium leading-5 text-white opacity-40"
           >
             Location
-          </small>
+          </h4>
           <div class="my-3 h-px w-full bg-black bg-opacity-10"></div>
           <p class="text-lg font-medium leading-7 text-white">
             DLF Cybercity, Bhubaneswar, India, &52050
           </p>
-          <small
-            class="mt-7 whitespace-nowrap text-sm font-medium leading-5 text-white"
+          <h4
+            class="mt-7 whitespace-nowrap text-sm font-medium leading-5 text-white opacity-40"
           >
             Working Hour
-          </small>
+          </h4>
           <div class="my-3 h-px w-full bg-black bg-opacity-10"></div>
           <p class="whitespace-nowrap text-lg font-medium leading-7 text-white">
             Monday To Friday
@@ -96,11 +105,11 @@ const form = reactive({
           >
             Our Support Team is available 24Hrs
           </small>
-          <small
-            class="mt-7 whitespace-nowrap text-sm font-medium leading-5 text-white"
+          <h4
+            class="mt-7 whitespace-nowrap text-sm font-medium leading-5 text-white opacity-40"
           >
             Contact Us
-          </small>
+          </h4>
           <div class="my-3 h-px w-full bg-black bg-opacity-10"></div>
           <p class="whitespace-nowrap text-lg font-medium leading-7 text-white">
             020 7993 2905
@@ -108,6 +117,16 @@ const form = reactive({
           <p class="whitespace-nowrap text-sm font-medium leading-5 text-white">
             Hello@ether.com
           </p>
+          <div class="mt-14 flex gap-7">
+            <a
+              v-for="(social, key) in socials"
+              :key="key"
+              :href="social"
+              class="cursor-pointer"
+            >
+              <Icon size="20px" :name="`mdi:${key}`" color="white" />
+            </a>
+          </div>
         </aside>
       </div>
     </div>
