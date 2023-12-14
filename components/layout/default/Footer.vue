@@ -1,80 +1,52 @@
 <template>
-  <footer class="mt-24 max-md:mt-12">
-    <div class="mb-8 px-[5%] lg:px-[10%]">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="37"
-        height="34"
-        viewBox="0 0 37 34"
-        fill="none"
-      >
-        <path
-          d="M-0.00012207 13.8518V0H36.7199V13.8518H-0.00012207Z"
-          fill="#666DFF"
-        />
-        <path
-          d="M-0.00012207 33.9999V23.9258H10.1295V33.9999H-0.00012207Z"
-          fill="#666DFF"
-        />
-        <path
-          d="M-0.00012207 23.9259V0H24.0578V23.9259H-0.00012207Z"
-          fill="#FFA155"
-        />
-        <path d="M10.1288 13.8518V0H24.0571V13.8518H10.1288Z" fill="#FFD3AF" />
-      </svg>
+  <footer>
+    <div class="mb-8 px-[5%] lg:px-[7%] xl:px-[10%]">
+      <div class="h-[52px] w-12">
+        <Icon name="PaxiDecorReverse" filled></Icon>
+      </div>
     </div>
     <div
-      class="footer-top flex w-full flex-col px-[5%] max-md:max-w-full lg:flex-row lg:px-[10%]"
+      class="footer-top flex w-full flex-col px-[5%] max-md:max-w-full lg:flex-row lg:gap-12 lg:px-[7%] xl:px-[10%]"
     >
       <div class="footer-top-left flex flex-none flex-col items-stretch">
         <div class="flex grow flex-col max-md:max-w-full">
-          <div
-            class="self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+          <h2
+            class="self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:text-4xl max-md:leading-[54px]"
           >
             Let's make<br />something special
-          </div>
-          <div
-            class="mt-11 self-stretch whitespace-nowrap text-2xl font-semibold leading-9 text-gray-800 max-md:mt-10 max-md:max-w-full"
-          >
+          </h2>
+          <h4 class="mt-10 text-2xl font-semibold leading-9 text-gray-800">
             Let's talk! 🤙
-          </div>
-          <div
-            class="mt-11 self-stretch whitespace-nowrap text-lg font-medium leading-7 text-gray-800 max-md:mt-10 max-md:max-w-full"
-          >
+          </h4>
+          <p class="mt-8 text-lg font-medium leading-7 text-gray-800">
             020 7993 2905
-          </div>
-          <div
-            class="mt-5 self-stretch whitespace-nowrap text-lg font-medium leading-7 text-gray-800 max-md:max-w-full"
-          >
+          </p>
+          <p class="mt-1 text-lg font-medium leading-7 text-gray-800">
             hi@finsweet.com
-          </div>
-          <div
-            class="mt-4 h-px shrink-0 self-stretch bg-black bg-opacity-10 max-md:max-w-full"
-          ></div>
-          <div
-            class="mt-5 self-stretch text-sm font-medium leading-5 text-gray-800 max-md:max-w-full"
-          >
+          </p>
+          <div class="my-4 h-px bg-black bg-opacity-10"></div>
+          <p class="text-sm font-medium leading-5 text-gray-800">
             DLF Cybercity, Bhubaneswar, <br />India, &52050
-          </div>
+          </p>
         </div>
       </div>
       <div
-        class="footer-top-right relative flex flex-auto flex-grow flex-wrap justify-start gap-[15%] md:flex-nowrap md:justify-end xl:pr-[10%]"
+        class="footer-top-right relative flex flex-auto flex-grow flex-wrap justify-start gap-[15%] md:flex-nowrap lg:justify-end lg:gap-[10%] xl:pr-[10%]"
       >
-        <div class="flex flex-col max-md:mt-10">
+        <div class="flex flex-col max-lg:mt-10">
           <NuxtLink
             v-for="(menu, index) in menuList"
             :key="index"
-            :to="menu.to"
+            :to="menu.path"
             class="mb-6 text-base font-semibold leading-7 text-gray-800"
           >
             {{ menu.title }}
           </NuxtLink>
         </div>
         <div class="flex flex-col">
-          <div class="flex grow flex-col max-md:mt-10">
+          <div class="flex grow flex-col max-lg:mt-10">
             <div
-              class="self-stretch whitespace-nowrap text-base font-semibold leading-7 text-gray-800"
+              class="self-stretch text-base font-semibold leading-7 text-gray-800"
             >
               Service
             </div>
@@ -82,16 +54,16 @@
               v-for="(service, index) in serviceList"
               :key="index"
               :to="service.to"
-              class="mt-6 whitespace-nowrap text-sm font-medium leading-5 text-gray-800"
+              class="mt-6 text-sm font-medium leading-5 text-gray-800"
             >
               {{ service.title }}
             </NuxtLink>
           </div>
         </div>
         <div class="flex flex-col">
-          <div class="flex grow flex-col max-md:mt-10">
+          <div class="flex grow flex-col max-lg:mt-10">
             <div
-              class="self-stretch whitespace-nowrap text-base font-semibold leading-7 text-gray-800"
+              class="self-stretch text-base font-semibold leading-7 text-gray-800"
             >
               Resourses
             </div>
@@ -99,7 +71,7 @@
               v-for="(resource, index) in resourceList"
               :key="index"
               :to="resource.to"
-              class="mt-5 self-stretch whitespace-nowrap text-sm font-medium leading-5 text-gray-800"
+              class="mt-6 self-stretch text-sm font-medium leading-5 text-gray-800"
             >
               {{ resource.title }}
             </NuxtLink>
@@ -111,9 +83,7 @@
               <div class="h-full w-1/3 bg-[#FFD3AF]"></div>
               <div class="h-full w-2/3 bg-[#666DFF]"></div>
             </div>
-            <div
-              class="my-auto self-center text-base font-medium leading-6 text-gray-800"
-            >
+            <div class="my-auto text-base font-medium leading-6 text-gray-800">
               Contact Us
             </div>
             <Icon name="cil:arrow-right"></Icon>
@@ -122,7 +92,7 @@
       </div>
     </div>
     <div
-      class="footer-bottom mt-16 flex w-full flex-col items-center justify-center self-stretch bg-orange-100 px-[5%] py-5 max-md:mt-10 max-md:max-w-full lg:px-[10%]"
+      class="footer-bottom mt-16 flex w-full flex-col items-center justify-center self-stretch bg-orange-100 px-[5%] py-5 max-md:mt-10 max-md:max-w-full lg:px-[7%] xl:px-[10%]"
     >
       <div
         class="flex w-full items-stretch justify-between gap-5 max-md:flex-wrap"
@@ -135,10 +105,9 @@
             img-size="xs:40px sm:40px md:40px 40px"
             alt="Logo"
             class="aspect-square w-10 max-w-full shrink-0 overflow-hidden object-contain object-center"
-            preload
           ></UiImage>
           <div
-            class="my-auto grow self-center whitespace-nowrap text-base font-medium leading-6 text-black"
+            class="my-auto grow self-center text-base font-medium leading-6 text-black"
           >
             ©2023 Paxi Tech
           </div>

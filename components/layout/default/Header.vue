@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="flex min-h-[80px] w-full items-center self-stretch overflow-hidden bg-[#232536] px-[5%] lg:px-[10%]"
+    class="flex min-h-[80px] w-full items-center self-stretch overflow-hidden bg-[#232536] px-[5%] lg:px-[7%] xl:px-[10%]"
   >
     <div
       class="relative flex w-full items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
@@ -25,7 +25,7 @@ onMounted(() => {
         h="1"
         img-size="xs:40px sm:40px md:40px 40px"
         alt="Logo"
-        class="aspect-square w-10 max-w-full shrink-0 overflow-hidden object-contain object-center"
+        class="w-10"
         preload
       ></UiImage>
       <div class="md:hidden">
@@ -46,7 +46,7 @@ onMounted(() => {
           v-for="(menu, index) in menuList"
           :key="index"
           :to="menu.path"
-          class="self-start whitespace-nowrap text-base font-medium leading-6 text-white"
+          class="text-base font-medium leading-6 text-white"
           :class="{ 'opacity-60': getCurrentMenu !== index }"
           @click="handleClickMenu(index)"
         >
@@ -62,7 +62,7 @@ onMounted(() => {
     tabindex="-1"
     aria-labelledby="drawer-menu-mobile"
   >
-    <h5
+    <header
       id="drawer-right-label"
       class="flex min-h-[64px] items-center justify-between border-b-2 border-gray-300 pb-3"
     >
@@ -90,7 +90,7 @@ onMounted(() => {
       >
         <span class="sr-only">Close menu</span>
       </Icon>
-    </h5>
+    </header>
     <nav class="flex flex-col">
       <NuxtLink
         v-for="(menu, index) in menuList"

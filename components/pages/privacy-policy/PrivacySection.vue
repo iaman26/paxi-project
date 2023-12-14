@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <section
-    class="relative mb-24 flex w-full flex-col items-center justify-center self-stretch px-[5%] py-12 max-md:max-w-full max-md:bg-[#ECF8F9] md:static md:mb-0 lg:px-[10%]"
+    class="relative mb-24 flex w-full flex-col items-center justify-center self-stretch px-[5%] py-12 max-md:max-w-full max-md:bg-[#ECF8F9] md:static md:mb-0 lg:px-[7%] xl:px-[10%]"
   >
     <div class="w-full bg-[#ECF8F9] md:relative md:p-12 lg:px-0 lg:py-24">
       <div class="mx-auto w-full lg:w-8/12">

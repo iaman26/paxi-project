@@ -6,7 +6,7 @@
   >
     <div class="w-full lg:my-12">
       <header
-        class="mb-10 flex w-full flex-col gap-6 px-[5%] lg:mb-16 lg:w-2/3 lg:px-[10%] xl:w-[65%]"
+        class="mb-10 flex w-full flex-col gap-6 px-[5%] lg:mb-16 lg:w-2/3 lg:px-[7%] xl:w-[65%] xl:px-[10%]"
       >
         <h2
           class="w-full self-stretch text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
@@ -27,7 +27,7 @@
           his giving Remain expense you position concluded.
         </p>
       </header>
-      <div class="px-0 lg:px-[10%]">
+      <div class="px-0 lg:px-[7%] xl:px-[10%]">
         <UiImage src="/vision.png" alt="Our vision image"></UiImage>
       </div>
     </div>

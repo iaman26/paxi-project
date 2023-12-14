@@ -2,7 +2,7 @@
 
 <template>
   <section
-    class="flex w-full flex-col items-center justify-center self-stretch bg-white py-12 max-md:max-w-full lg:px-[10%]"
+    class="flex w-full flex-col items-center justify-center self-stretch bg-white py-12 max-md:max-w-full lg:px-[7%] xl:px-[10%]"
   >
     <div class="w-full lg:my-12">
       <div
@@ -36,7 +36,7 @@
           </svg>
         </div>
         <div
-          class="flex flex-col items-center justify-between gap-5 px-[10%] max-md:mt-10 max-md:px-[5%] lg:flex-row"
+          class="flex flex-col items-center justify-between gap-5 px-[10%] max-md:mt-10 max-md:px-[5%] lg:flex-row lg:px-[7%]"
         >
           <header class="flex w-full flex-col items-start gap-3 lg:w-1/2">
             <p

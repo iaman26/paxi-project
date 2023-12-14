@@ -35,7 +35,7 @@ defineExpose({
 <template>
   <section
     ref="positionSectionRef"
-    class="flex w-full flex-col items-center justify-center self-stretch px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
+    class="flex w-full flex-col items-center justify-center self-stretch px-[5%] py-12 max-md:max-w-full lg:px-[7%] xl:px-[10%]"
   >
     <div class="w-full bg-[#ECF8F9] p-5 lg:p-16">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

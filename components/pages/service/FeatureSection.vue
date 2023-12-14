@@ -29,7 +29,7 @@ defineExpose({ featureRef })
 <template>
   <section
     ref="featureRef"
-    class="relative flex w-full flex-col items-center justify-center self-stretch bg-orange-100 px-[5%] max-md:max-w-full lg:px-[10%]"
+    class="relative flex w-full flex-col items-center justify-center self-stretch bg-orange-100 px-[5%] max-md:max-w-full lg:px-[7%] xl:px-[10%]"
     :class="{ 'bg-white': index % 2 !== 0, 'bg-slate-100': index % 2 === 0 }"
   >
     <div

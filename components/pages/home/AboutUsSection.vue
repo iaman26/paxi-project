@@ -24,7 +24,7 @@ const aboutUs = [
 
 <template>
   <section
-    class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
+    class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[7%] xl:px-[10%]"
   >
     <div class="w-full lg:my-12">
       <h2
@@ -124,7 +124,9 @@ const aboutUs = [
           </div>
         </div>
         <div class="my-auto self-center max-md:mt-10 max-md:self-end">
-          <UiButtonRedirect>Read about us</UiButtonRedirect>
+          <UiButtonRedirect>
+            <NuxtLink to="/company">Read about us</NuxtLink>
+          </UiButtonRedirect>
         </div>
       </div>
     </div>
