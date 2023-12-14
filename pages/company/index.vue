@@ -1,4 +1,15 @@
 <script setup lang="ts">
+definePageMeta({
+  title: 'Company',
+})
+
+useSeoMeta({
+  title: 'Company',
+  ogTitle: 'Company',
+  description: `Award-winning Company seen and used by millions around the world.`,
+  ogDescription: `Award-winning Company seen and used by millions around the world.`,
+})
+
 const expertises = [
   {
     icon: 'PaxiShuttle',
