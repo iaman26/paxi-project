@@ -11,6 +11,19 @@ const handleApplyNow = () => {
   const element = applySectionRef.value!.applySectionRef
   element?.scrollIntoView({ behavior: 'smooth' })
 }
+
+useHead({
+  titleTemplate: 'Full Stack Developer',
+  meta: [
+    { property: 'og:title', content: `Full Stack Developer` },
+    {
+      property: 'og:description',
+      content: `Through True Rich Attended does no end it his mother since real
+              had half every him case in packages enquire we up ecstatic
+              unsatiable saw his giving Remain expense you position concluded.`,
+    },
+  ],
+})
 </script>
 
 <template>

@@ -25,7 +25,7 @@ onMounted(() => {
           <li v-for="(tab, index) in tabs" :key="index" role="presentation">
             <button
               :id="`${tab}-tab`"
-              class="py-4 text-xl font-semibold leading-9 xl:py-8 xl:text-2xl"
+              class="py-4 xl:py-8"
               :class="{
                 'text-indigo-600': index === currentTab,
                 'relative z-10 border-b-4 border-b-indigo-600':
@@ -39,7 +39,9 @@ onMounted(() => {
               :aria-selected="index === currentTab"
               @click="currentTab = index"
             >
-              {{ tab.charAt(0).toUpperCase() + tab.slice(1) }}
+              <h4 class="text-xl font-semibold leading-9 xl:text-2xl">
+                {{ tab.charAt(0).toUpperCase() + tab.slice(1) }}
+              </h4>
             </button>
           </li>
         </ul>
@@ -69,7 +71,7 @@ onMounted(() => {
         </div>
         <div
           id="responsibilities"
-          class=""
+          class="hidden"
           role="tabpanel"
           aria-labelledby="responsibilities-tab"
         >

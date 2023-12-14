@@ -99,9 +99,11 @@ onMounted(() => {
         class="flex w-full items-center gap-4 border-b-2 py-4"
         @click="handleClickMenu(index)"
       >
-        <Icon :name="menu.icon" size="24px">
-          <span class="sr-only">{{ menu.title }}</span>
-        </Icon>
+        <div class="h-6 w-6">
+          <Icon :name="menu.icon" size="24px">
+            <span class="sr-only">{{ menu.title }}</span>
+          </Icon>
+        </div>
         <span
           class="text-base font-medium leading-6"
           :class="{
