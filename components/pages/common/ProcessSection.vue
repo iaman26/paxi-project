@@ -23,46 +23,24 @@ defineProps({
     class="flex w-full flex-col items-center justify-center self-stretch bg-white px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
     <div class="relative w-full lg:my-12">
-      <div class="absolute right-0 top-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="27"
-          height="29"
-          viewBox="0 0 27 29"
-          fill="none"
-        >
-          <path
-            d="M16 -4.80825e-07L27 0L27 29L16 29L16 -4.80825e-07Z"
-            fill="#666DFF"
-          />
-          <path
-            d="M0 -3.49691e-07L8 0L8 8L-3.49691e-07 8L0 -3.49691e-07Z"
-            fill="#666DFF"
-          />
-          <path
-            d="M8 -8.30516e-07L27 0L27 19L8 19L8 -8.30516e-07Z"
-            fill="#FFA155"
-          />
-          <path d="M16 8L27 8L27 19L16 19L16 8Z" fill="#FFD3AF" />
-        </svg>
+      <div class="absolute right-0 top-0 h-8 w-8">
+        <Icon name="PaxiDecor" filled></Icon>
       </div>
-      <div class="mg:mb-14 mb-10 w-full lg:w-[55%]">
-        <div
-          class="w-full self-stretch text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
+      <div class="mb-10 flex w-full flex-col gap-6 lg:mb-14 lg:w-[55%]">
+        <h2
+          class="text-sm font-medium uppercase leading-5 tracking-[3px] text-black"
         >
           Our Process
-        </div>
-        <div
-          class="mt-6 shrink grow basis-auto text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+        </h2>
+        <h3
+          class="text-5xl font-semibold leading-[58px] text-gray-800 max-md:text-4xl max-md:leading-[54px]"
         >
           The process we are working With Our client Worldwide
-        </div>
-        <div
-          class="mt-4 w-full self-stretch text-base leading-6 text-gray-800 max-md:max-w-full"
-        >
+        </h3>
+        <p class="text-base leading-6 text-gray-800">
           Through True Rich Attended does no end it his mother since real had
           half every him case in packages enquire we up ecstatic unsatiable.
-        </div>
+        </p>
       </div>
       <div
         class="processes grid grid-cols-1 gap-12 max-md:gap-8 md:grid-cols-2 lg:grid-cols-3"
@@ -72,27 +50,27 @@ defineProps({
           :key="index"
           class="process group relative flex gap-4 border border-solid border-gray-800 border-opacity-20 pb-7 pl-8 pr-3 pt-8 max-md:pb-4 max-md:pl-5 max-md:pt-5"
         >
-          <div
+          <span
             class="absolute right-4 top-3 whitespace-nowrap text-2xl font-semibold leading-8 text-gray-300"
           >
             {{ `0${index + 1}` }}
-          </div>
+          </span>
           <div
             class="flex aspect-square h-12 w-12 max-w-full shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#FFE6D2] object-contain object-center"
           >
             <div class="h-6 w-6">
-              <Icon :name="process.icon"></Icon>
+              <Icon :name="process.icon" filled></Icon>
             </div>
           </div>
           <div class="flex grow basis-[0%] flex-col items-end self-stretch">
-            <div
+            <h6
               class="self-stretch whitespace-nowrap text-base font-semibold leading-7 text-black"
             >
               {{ process.title }}
-            </div>
-            <div class="mt-2 self-stretch text-base leading-6 text-gray-800">
+            </h6>
+            <p class="mt-2 self-stretch text-base leading-6 text-gray-800">
               {{ process.description }}
-            </div>
+            </p>
           </div>
           <div
             class="absolute -bottom-2 left-0 hidden h-2 w-full group-first:flex group-last:flex"

@@ -96,37 +96,37 @@ const testimonials = [
 ]
 const processes = [
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiLamp',
     title: 'Discover',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiDocument',
     title: 'Designing',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiWebDevelopment',
     title: 'Development',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiThink',
     title: 'Testing',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiShuttle',
     title: 'Deployment',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiMaintenance',
     title: 'Maintenance',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',

@@ -13,7 +13,7 @@ const features = [
       'Best in class tech support for your company. We become your tech backbone',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/assets/images/feature-1.png',
+    image: '/feature-1.png',
   },
   {
     featureName: 'Development',
@@ -21,7 +21,7 @@ const features = [
       'Bring your ideas to reality with certified team of developers, working with latest technologies ',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/assets/images/feature-2.png',
+    image: '/feature-2.png',
   },
   {
     featureName: 'AWS/Azure ',
@@ -29,14 +29,14 @@ const features = [
       'We help you deploy, manage and secure your application on leading web services',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/assets/images/feature-3.png',
+    image: '/feature-3.png',
   },
   {
     featureName: 'Consulting',
     title: 'Get advice from world class professionals',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/assets/images/feature-4.png',
+    image: '/feature-4.png',
   },
   {
     featureName: 'Information Technology',
@@ -44,43 +44,43 @@ const features = [
       'We want to get local identification in every corner of the world in this era of global citizenship.',
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
-    image: '/assets/images/feature-5.png',
+    image: '/feature-5.png',
   },
 ]
 
 const processes = [
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiLamp',
     title: 'Discover',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiDocument',
     title: 'Designing',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiWebDevelopment',
     title: 'Development',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiThink',
     title: 'Testing',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiShuttle',
     title: 'Deployment',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
   {
-    icon: 'PaxiHeadphone',
+    icon: 'PaxiMaintenance',
     title: 'Maintenance',
     description:
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
@@ -91,6 +91,19 @@ const handleScrollToFeature = (index: number) => {
   const element = featureRefs[index].featureRef
   element?.scrollIntoView({ behavior: 'smooth' })
 }
+
+definePageMeta({
+  title: 'Service',
+})
+
+useSeoMeta({
+  title: 'Service ',
+  ogTitle: 'Service ',
+  description:
+    'We Build Software Solutionthat Solve Clients Business Challenges',
+  ogDescription:
+    'We Build Software Solutionthat Solve Clients Business Challenges',
+})
 </script>
 
 <template>
