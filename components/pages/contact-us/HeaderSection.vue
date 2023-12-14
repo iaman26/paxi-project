@@ -100,11 +100,9 @@ const socials = {
           <p class="whitespace-nowrap text-lg font-medium leading-7 text-white">
             9:00 AM to 8:00 PM
           </p>
-          <small
-            class="whitespace-nowrap text-sm font-medium leading-5 text-white"
-          >
+          <p class="whitespace-nowrap text-sm font-medium leading-5 text-white">
             Our Support Team is available 24Hrs
-          </small>
+          </p>
           <h4
             class="mt-7 whitespace-nowrap text-sm font-medium leading-5 text-white opacity-40"
           >

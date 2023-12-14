@@ -23,12 +23,12 @@ useHead({
 
 const blogs = [
   {
-    img: '/assets/images/blog-1.png',
+    img: '/blog-1.png',
     title: 'Today’s best design trends for digital products',
     date: 'Jan 19, 2021',
   },
   {
-    img: '/assets/images/blog-2.png',
+    img: '/blog-2.png',
     title: 'A practical guide to building a brand strategy',
     date: 'May 21, 2023',
   },

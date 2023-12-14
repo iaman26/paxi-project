@@ -1,16 +1,3 @@
-<template>
-  <main>
-    <HomeHeaderSection />
-    <HomeAboutUsSection />
-    <CommonExpertiseSection :expertises="expertises" />
-    <HomeServiceSection :services="services" />
-    <CommonProcessSection :processes="processes" />
-    <HomeTestimonialSection :testimonials="testimonials" />
-    <CommonBlogSection :blogs="blogs" />
-    <CommonCTASection />
-  </main>
-</template>
-
 <script setup lang="ts">
 const expertises = [
   {
@@ -54,14 +41,14 @@ const services = [
 ]
 const blogs = [
   {
-    img: '/assets/images/blog-1.png',
+    img: '/blog-1.png',
     title: 'Today’s best design trends for digital products',
-    date: 'Jan 19, 2021',
+    date: '2021-01-19',
   },
   {
-    img: '/assets/images/blog-2.png',
+    img: '/blog-2.png',
     title: 'A practical guide to building a brand strategy',
-    date: 'May 21, 2023',
+    date: '2023-03-21',
   },
 ]
 
@@ -70,27 +57,24 @@ const testimonials = [
     content:
       'Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!',
     name: 'Johnny Andro',
-    avatar:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/9ad61dbd369c51059b34ff440b5f5dccce09c83f8dd533c3346ab09411b6d159?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&width=100',
+    avatar: '/customer-1.png',
     role: 'Director, Company',
     logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74b9ddd298313a0c6710191af1a079d680e3b874ced29c454ed2b0f2189be2cb?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&',
   },
   {
     content:
       'Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!',
-    name: 'Johnny Andro',
-    avatar:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/9ad61dbd369c51059b34ff440b5f5dccce09c83f8dd533c3346ab09411b6d159?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&width=100',
-    role: 'Director, Company',
+    name: 'Colum Belza',
+    avatar: '/customer-2.png',
+    role: 'CEO, Company',
     logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74b9ddd298313a0c6710191af1a079d680e3b874ced29c454ed2b0f2189be2cb?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&',
   },
   {
     content:
       'Finsweet has been a wonderful partner to work with. I have been a customer now for the past few months now and I have had nothing but positive experiences!',
-    name: 'Johnny Andro',
-    avatar:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/9ad61dbd369c51059b34ff440b5f5dccce09c83f8dd533c3346ab09411b6d159?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&width=100',
-    role: 'Director, Company',
+    name: 'Alberto',
+    avatar: '/customer-3.png',
+    role: 'Leader Technology, Company',
     logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74b9ddd298313a0c6710191af1a079d680e3b874ced29c454ed2b0f2189be2cb?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&',
   },
 ]
@@ -132,6 +116,30 @@ const processes = [
       'We aim to attain the greatest satisfaction for our clients and be one of the prominent.',
   },
 ]
+
+definePageMeta({
+  title: 'Home',
+})
+
+useSeoMeta({
+  title: 'Home ',
+  ogTitle: 'Home ',
+  description: 'Transform Your Idea Into Reality with Finsweet',
+  ogDescription: 'Transform Your Idea Into Reality with Finsweet',
+})
 </script>
+
+<template>
+  <main>
+    <HomeHeaderSection />
+    <HomeAboutUsSection />
+    <CommonExpertiseSection :expertises="expertises" />
+    <HomeServiceSection :services="services" />
+    <CommonProcessSection :processes="processes" />
+    <HomeTestimonialSection :testimonials="testimonials" />
+    <CommonBlogSection :blogs="blogs" />
+    <CommonCTASection />
+  </main>
+</template>
 
 <style scoped></style>

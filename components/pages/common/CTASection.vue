@@ -36,25 +36,25 @@
           </svg>
         </div>
         <div
-          class="flex items-center justify-between gap-5 px-[10%] max-md:mt-10 max-md:flex-col max-md:items-stretch max-md:px-[5%]"
+          class="flex flex-col items-center justify-between gap-5 px-[10%] max-md:mt-10 max-md:px-[5%] lg:flex-row"
         >
-          <div class="flex w-full flex-col items-start gap-3 lg:w-1/2">
-            <div
+          <header class="flex w-full flex-col items-start gap-3 lg:w-1/2">
+            <p
               class="text-sm font-medium uppercase leading-5 tracking-[3px] text-white"
             >
               NEWSLETTER
-            </div>
-            <div
+            </p>
+            <h3
               class="text-4xl font-semibold leading-[54px] text-white max-md:text-2xl max-md:leading-[40px]"
             >
               Subscribe our News Letter<br />to get Latest Updates.
-            </div>
-          </div>
+            </h3>
+          </header>
           <div class="flex w-full justify-start lg:w-1/2 lg:justify-end">
             <input
               type="email"
               placeholder="Paresh@Pixeto.com"
-              class="w-full bg-white p-5 text-base font-medium leading-6 text-gray-800 placeholder:text-[#232536] placeholder:opacity-40 lg:w-4/5"
+              class="w-full bg-white p-5 text-base font-medium leading-6 text-gray-800 placeholder:text-[#232536] placeholder:opacity-40 md:w-2/3 lg:w-4/5"
             />
           </div>
         </div>

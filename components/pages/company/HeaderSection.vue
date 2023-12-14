@@ -62,6 +62,8 @@ import 'swiper/css/pagination'
                 :src="`/about-${index + 1}.png`"
                 alt="About image"
                 preload
+                w="1"
+                h="1"
               >
               </UiImage>
             </swiper-slide>

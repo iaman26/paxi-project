@@ -65,7 +65,9 @@ defineProps({
               <UiImage
                 :src="trending.avatar"
                 :alt="`Avatar ${trending.author}`"
-                class="aspect-square w-full flex-1 shrink-0 overflow-hidden rounded-[50%] object-contain object-center"
+                class="w-full rounded-[50%]"
+                w="1"
+                h="1"
                 preload
               >
               </UiImage>

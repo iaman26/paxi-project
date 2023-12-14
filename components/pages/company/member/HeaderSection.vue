@@ -35,11 +35,11 @@ defineProps({
           >
             {{ member.name }}
           </h3>
-          <small
+          <p
             class="mt-2 self-center whitespace-nowrap text-sm font-medium leading-5 text-gray-800 opacity-70"
           >
             {{ member.role }}
-          </small>
+          </p>
           <p
             class="mt-7 w-full self-stretch text-center text-base leading-6 text-gray-800"
           >

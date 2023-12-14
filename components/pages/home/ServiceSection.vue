@@ -26,21 +26,21 @@ defineProps({
       <div
         class="flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0 md:justify-between"
       >
-        <div
-          class="flex w-[80%] flex-col items-stretch max-md:ml-0 max-md:w-full xl:w-[55%]"
+        <header
+          class="flex w-[80%] flex-col items-stretch max-md:w-full xl:w-[55%]"
         >
           <h2
-            class="whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
+            class="text-sm font-medium uppercase leading-5 tracking-[3px] text-black"
           >
             Our Services
           </h2>
           <h3
-            class="mt-4 text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+            class="mt-6 text-5xl font-semibold leading-[58px] text-gray-800 max-md:text-4xl max-md:leading-[54px]"
           >
             We build software solutions that solve client's business challenges
           </h3>
           <UiButton>Start a Project</UiButton>
-        </div>
+        </header>
       </div>
       <div
         class="mt-8 flex gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0 lg:mt-20"
@@ -57,14 +57,14 @@ defineProps({
               class="flex aspect-square w-[47px] max-w-full shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#FFE6D2] object-contain object-center"
             >
               <div class="h-6 w-6">
-                <Icon :name="service.icon"></Icon>
+                <Icon :name="service.icon" filled></Icon>
               </div>
             </div>
-            <h3
+            <h6
               class="mt-6 self-stretch whitespace-nowrap text-base font-semibold leading-7 text-black"
             >
               {{ service.title }}
-            </h3>
+            </h6>
             <p class="mt-5 self-stretch text-base leading-6 text-gray-600">
               {{ service.description }}
             </p>

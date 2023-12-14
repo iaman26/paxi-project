@@ -48,7 +48,7 @@ defineProps({
         <div
           v-for="(process, index) in processes"
           :key="index"
-          class="process group relative flex gap-4 border border-solid border-gray-800 border-opacity-20 pb-7 pl-8 pr-3 pt-8 max-md:pb-4 max-md:pl-5 max-md:pt-5"
+          class="process group relative flex gap-4 border border-solid border-gray-800 border-opacity-20 p-8"
         >
           <span
             class="absolute right-4 top-3 whitespace-nowrap text-2xl font-semibold leading-8 text-gray-300"

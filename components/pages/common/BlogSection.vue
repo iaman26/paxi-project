@@ -23,40 +23,43 @@ defineProps({
     class="flex w-full flex-col items-center justify-center self-stretch bg-slate-100 px-[5%] py-12 max-md:max-w-full lg:px-[10%]"
   >
     <div class="w-full lg:my-12">
-      <div class="flex w-full flex-col">
+      <header class="flex w-full flex-col">
         <div class="h-4 w-4 bg-indigo-500"></div>
         <h2
-          class="mt-4 self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+          class="mt-6 self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
         >
           Read our latest blogs & news
         </h2>
-      </div>
+      </header>
       <div class="mt-12 max-md:mt-8">
-        <div
-          class="flex flex-col gap-8 max-md:items-stretch max-md:gap-0 lg:flex-row"
-        >
+        <div class="flex flex-col gap-8 lg:flex-row">
           <div
             v-for="(blog, index) in blogs"
             :key="index"
             class="flex w-full items-stretch max-md:flex-col"
           >
             <div class="flex w-full flex-col items-stretch lg:w-[45%]">
-              <img
-                :src="useAsset(blog.img)"
-                class="aspect-1 h-[250px] w-full grow overflow-hidden object-cover object-center max-md:mt-8"
-              />
+              <UiImage
+                :src="blog.img"
+                :alt="`Blog ${blog.title}`"
+                w="1"
+                h="1"
+                class="h-[250px] lg:h-full"
+              >
+              </UiImage>
             </div>
             <div
               class="flex w-full flex-col items-stretch bg-white p-8 lg:w-[55%]"
             >
-              <div
+              <time
                 class="whitespace-nowrap text-sm font-medium leading-5 text-gray-500"
+                :datetime="blog.date"
               >
-                {{ blog.date }}
-              </div>
-              <h2 class="mt-2 text-2xl font-semibold leading-9 text-gray-800">
+                {{ formatDateWithSuffix(blog.date) }}
+              </time>
+              <h4 class="mt-2 text-2xl font-semibold leading-9 text-gray-800">
                 {{ blog.title }}
-              </h2>
+              </h4>
               <UiButtonRedirect class="mt-7">Read more</UiButtonRedirect>
             </div>
           </div>
