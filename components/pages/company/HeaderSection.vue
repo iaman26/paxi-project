@@ -10,52 +10,34 @@ import 'swiper/css/pagination'
   >
     <div class="w-full lg:my-12">
       <div class="flex flex-col">
-        <div class="flex w-full items-start justify-between">
+        <div class="relative flex w-full items-start justify-between">
           <div class="h-6 w-6 bg-[#FFD3AF]"></div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="52"
-            viewBox="0 0 48 52"
-            fill="none"
-          >
-            <path
-              d="M28 -8.74228e-07L48 0L48 52L28 52L28 -8.74228e-07Z"
-              fill="#666DFF"
-            />
-            <path
-              d="M0 -6.11959e-07L14 0L14 14L-6.11959e-07 14L0 -6.11959e-07Z"
-              fill="#666DFF"
-            />
-            <path
-              d="M14 -1.48619e-06L48 0L48 34L14 34L14 -1.48619e-06Z"
-              fill="#FFA155"
-            />
-            <path d="M28 14L48 14L48 34L28 34L28 14Z" fill="#FFD3AF" />
-          </svg>
+          <div class="absolute right-0 top-0 h-[52px] w-12">
+            <Icon name="PaxiDecor" filled></Icon>
+          </div>
         </div>
         <div
-          class="flex w-full flex-col items-stretch gap-4 max-md:ml-0 max-md:w-full xl:w-1/2"
+          class="flex w-full flex-col items-stretch gap-4 max-md:w-full xl:w-1/2"
         >
-          <h3
-            class="mt-6 whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
-          >
-            Company
-          </h3>
-          <h2
-            class="mt-1 text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
-          >
-            Award-winning Company seen and used by millions around the world.
-          </h2>
-          <p class="mt-2 text-base leading-6 text-gray-600 max-md:max-w-full">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The Maker
-            is a decentralized.
-          </p>
+          <header class="mt-6 flex w-full flex-col items-stretch gap-6">
+            <h1
+              class="whitespace-nowrap text-sm font-medium uppercase leading-5 tracking-[3px] text-black max-md:max-w-full"
+            >
+              Company
+            </h1>
+            <h2
+              class="text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
+            >
+              Award-winning Company seen and used by millions around the world.
+            </h2>
+            <p class="text-base leading-6 text-gray-600 max-md:max-w-full">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              Maker is a decentralized.
+            </p>
+          </header>
         </div>
-        <div
-          class="relative mt-16 flex items-stretch justify-between gap-3 max-md:mt-12 max-md:max-w-full max-md:flex-wrap max-md:justify-center"
-        >
+        <div class="relative mt-16 max-md:mt-12">
           <swiper
             :slides-per-view="1"
             :space-between="20"
@@ -76,10 +58,12 @@ import 'swiper/css/pagination'
             class="mySwiper"
           >
             <swiper-slide v-for="(_, index) in 3" :key="index">
-              <img
-                src="/assets/images/about-1.png"
-                class="aspect-1 w-full grow overflow-hidden object-cover object-center"
-              />
+              <UiImage
+                :src="`/about-${index + 1}.png`"
+                alt="About image"
+                preload
+              >
+              </UiImage>
             </swiper-slide>
           </swiper>
           <div

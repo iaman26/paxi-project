@@ -30,28 +30,28 @@ const aboutUs = [
         <div
           class="flex w-[40%] flex-col items-stretch max-md:ml-0 max-md:w-full"
         >
-          <div class="flex grow flex-col gap-4 max-md:max-w-full">
+          <div class="flex flex-col">
             <div class="h-4 w-4 bg-indigo-500"></div>
-            <h2
-              class="self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]"
-            >
-              Our Story 👇
-            </h2>
-            <h1
-              class="self-stretch text-lg font-medium leading-7 text-gray-800 max-md:max-w-full"
-            >
-              From Startups to Titans of Industry
-            </h1>
-            <p
-              class="self-stretch text-base leading-6 text-gray-800 max-md:max-w-full"
-            >
-              Through True Rich Attended does no end it his mother since
-              favourable real had half every him case in packages enquire we up
-              ecstatic unsatiable saw his giving Remain expense of gay produce
-              excited perceived do an a china mean its so ye when in explained
-              Hearts am next over match mr partiality not shoud latter thus as
-              out no passed forming middleton exercise up
-            </p>
+            <header class="mt-6 flex flex-col gap-6">
+              <h2
+                class="self-stretch text-5xl font-semibold leading-[58px] text-gray-800 max-md:text-4xl max-md:leading-[54px]"
+              >
+                Our Story 👇
+              </h2>
+              <h3
+                class="self-stretch text-lg font-medium leading-7 text-gray-800"
+              >
+                From Startups to Titans of Industry
+              </h3>
+              <p class="self-stretch text-base leading-6 text-gray-800">
+                Through True Rich Attended does no end it his mother since
+                favourable real had half every him case in packages enquire we
+                up ecstatic unsatiable saw his giving Remain expense of gay
+                produce excited perceived do an a china mean its so ye when in
+                explained Hearts am next over match mr partiality not shoud
+                latter thus as out no passed forming middleton exercise up
+              </p>
+            </header>
           </div>
         </div>
         <div
@@ -62,11 +62,11 @@ const aboutUs = [
             :key="index"
             class="flex flex-col"
           >
-            <div
+            <h3
               class="self-stretch whitespace-nowrap text-4xl font-semibold leading-[54px] text-gray-800"
             >
               {{ us.number }}
-            </div>
+            </h3>
             <div
               class="mt-2 flex h-2 w-20 justify-start self-stretch max-md:justify-center"
             >
@@ -74,11 +74,11 @@ const aboutUs = [
               <div class="w-3/6 bg-[#FFD3AF]"></div>
               <div class="w-1/6 bg-[#444CFC]"></div>
             </div>
-            <div
+            <h6
               class="mt-1 self-stretch whitespace-nowrap text-base leading-6 text-black"
             >
               {{ us.title }}
-            </div>
+            </h6>
           </div>
         </div>
       </div>
