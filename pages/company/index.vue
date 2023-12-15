@@ -35,11 +35,11 @@ const expertises = [
 <template>
   <main>
     <CompanyHeaderSection />
-    <CompanyOurStorySection />
-    <CommonExpertiseSection :expertises="expertises" />
-    <CompanyVisionSection />
-    <CompanyTeamSection />
-    <CommonCTASection class="pt-0" />
+    <LazyCompanyOurStorySection />
+    <LazyCommonExpertiseSection :expertises="expertises" />
+    <LazyCompanyVisionSection />
+    <LazyCompanyTeamSection />
+    <LazyCommonCTASection class="pt-0" />
   </main>
 </template>
 

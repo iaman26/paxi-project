@@ -29,9 +29,9 @@ useHead({
 <template>
   <main>
     <CareerDetailHeaderSection @handle-apply-now="handleApplyNow" />
-    <CareerDetailSection />
-    <CareerDetailApplySection ref="applySectionRef" />
-    <CommonCTASection />
+    <LazyCareerDetailSection />
+    <LazyCareerDetailApplySection ref="applySectionRef" />
+    <LazyCommonCTASection />
   </main>
 </template>
 

@@ -27,8 +27,8 @@ useHead({
 <template>
   <main>
     <BlogDetailHeaderSection :blog="blog" />
-    <BlogDetailPostSection :blog="blog" />
-    <CommonCTASection />
+    <LazyBlogDetailPostSection :blog="blog" />
+    <LazyCommonCTASection />
   </main>
 </template>
 

@@ -35,7 +35,7 @@ Advertisers and Advertising Networks: To provide you with select and serv e rele
 <template>
   <main>
     <PrivacyPolicyHeaderSection />
-    <PrivacyPolicyPrivacySection :content="content" />
+    <LazyPrivacyPolicyPrivacySection :content="content" />
   </main>
 </template>
 

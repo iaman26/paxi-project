@@ -151,9 +151,12 @@ const cultures = [
 <template>
   <main>
     <CareerHeaderSection @scroll-to-position="handleScrollToPosition" />
-    <CareerPositionSection ref="positionSectionRef" :positions="positions" />
-    <CareerCultureSection :cultures="cultures" />
-    <CommonCTASection />
+    <LazyCareerPositionSection
+      ref="positionSectionRef"
+      :positions="positions"
+    />
+    <LazyCareerCultureSection :cultures="cultures" />
+    <LazyCommonCTASection />
   </main>
 </template>
 

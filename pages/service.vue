@@ -128,15 +128,15 @@ useSeoMeta({
       :features="features"
       @scroll-to-feature="handleScrollToFeature"
     />
-    <CommonProcessSection :processes="processes" />
-    <ServiceFeatureSection
+    <LazyCommonProcessSection :processes="processes" />
+    <LazyServiceFeatureSection
       v-for="(feature, index) in features"
       :key="index"
       ref="featureRefs"
       :feature="feature"
       :index="index"
     />
-    <CommonCTASection />
+    <LazyCommonCTASection />
   </main>
 </template>
 

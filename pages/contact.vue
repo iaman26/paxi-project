@@ -16,7 +16,7 @@ Let’s Get in Touch with us 👋`,
 <template>
   <main>
     <ContactUsHeaderSection />
-    <ContactUsMapSection />
+    <LazyContactUsMapSection />
   </main>
 </template>
 

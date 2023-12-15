@@ -38,7 +38,7 @@ const blogs = [
 <template>
   <main>
     <CompanyMemberHeaderSection :member="member" />
-    <CommonBlogSection :blogs="blogs" />
+    <LazyCommonBlogSection :blogs="blogs" />
   </main>
 </template>
 

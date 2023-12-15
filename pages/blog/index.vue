@@ -79,9 +79,9 @@ const blogs: IBlogProp[] = [
 <template>
   <main>
     <BlogHeaderSection :blogs="blogs" :trending="blogs[0]" />
-    <BlogRecentSection :blogs="blogs" />
-    <BlogAllPostsSection :blogs="blogs" />
-    <CommonCTASection />
+    <LazyBlogRecentSection :blogs="blogs" />
+    <LazyBlogAllPostsSection :blogs="blogs" />
+    <LazyCommonCTASection />
   </main>
 </template>
 

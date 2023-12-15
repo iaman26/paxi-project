@@ -132,13 +132,13 @@ useSeoMeta({
 <template>
   <main>
     <HomeHeaderSection />
-    <HomeAboutUsSection />
-    <CommonExpertiseSection :expertises="expertises" />
-    <HomeServiceSection :services="services" />
-    <CommonProcessSection :processes="processes" />
-    <HomeTestimonialSection :testimonials="testimonials" />
-    <CommonBlogSection :blogs="blogs" />
-    <CommonCTASection />
+    <LazyHomeAboutUsSection />
+    <LazyCommonExpertiseSection :expertises="expertises" />
+    <LazyHomeServiceSection :services="services" />
+    <LazyCommonProcessSection :processes="processes" />
+    <LazyHomeTestimonialSection :testimonials="testimonials" />
+    <LazyCommonBlogSection :blogs="blogs" />
+    <LazyCommonCTASection />
   </main>
 </template>
 
