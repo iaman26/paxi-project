@@ -1,14 +1,40 @@
 <script setup lang="ts">
-import { initDrawers } from 'flowbite'
-import { menuList } from '@/constants'
+import { Drawer } from 'flowbite'
+import type { DrawerOptions, DrawerInterface, InstanceOptions } from 'flowbite'
 import { useAppStore } from '@/store/app'
+import { menuList } from '@/constants'
 
 const appStore = useAppStore()
+let drawer: DrawerInterface | null = null
 const { getCurrentMenu } = storeToRefs(appStore)
 const { handleClickMenu } = appStore
 
 onMounted(() => {
-  initDrawers()
+  // options with default values
+  const options: DrawerOptions = {
+    placement: 'right',
+    backdrop: true,
+    bodyScrolling: false,
+    edge: false,
+    edgeOffset: '',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30',
+  }
+
+  // instance options object
+  const instanceOptions: InstanceOptions = {
+    id: 'drawer-js-example',
+    override: true,
+  }
+  // set the drawer menu element
+  const $targetEl: HTMLElement | null =
+    document.getElementById('drawer-menu-mobile')
+
+  /*
+   * $targetEl (required)
+   * options (optional)
+   * instanceOptions (optional)
+   */
+  drawer = new Drawer($targetEl, options, instanceOptions)
 })
 </script>
 
@@ -37,6 +63,7 @@ onMounted(() => {
           data-drawer-show="drawer-menu-mobile"
           data-drawer-placement="right"
           aria-controls="drawer-menu-mobile"
+          @click="drawer?.show()"
         ></Icon>
       </div>
       <nav
@@ -97,7 +124,12 @@ onMounted(() => {
         :key="index"
         :to="menu.path"
         class="flex w-full items-center gap-4 border-b-2 py-4"
-        @click="handleClickMenu(index)"
+        @click="
+          () => {
+            handleClickMenu(index)
+            drawer?.hide()
+          }
+        "
       >
         <div class="h-6 w-6">
           <Icon :name="menu.icon" size="24px">
