@@ -1,8 +1,4 @@
-<script setup lang="ts">
-import { Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section
@@ -38,7 +34,7 @@ import 'swiper/css/pagination'
           </header>
         </div>
         <div class="relative mt-16 max-md:mt-12">
-          <swiper
+          <Swiper
             :slides-per-view="1"
             :space-between="20"
             :breakpoints="{
@@ -54,8 +50,7 @@ import 'swiper/css/pagination'
             :pagination="{
               type: 'progressbar',
             }"
-            :modules="[Pagination]"
-            class="mySwiper"
+            :modules="[SwiperPagination]"
           >
             <swiper-slide v-for="(_, index) in 3" :key="index">
               <UiImage
@@ -67,7 +62,7 @@ import 'swiper/css/pagination'
               >
               </UiImage>
             </swiper-slide>
-          </swiper>
+          </Swiper>
           <div
             class="absolute -right-0 -top-5 flex h-5 w-64 max-md:-top-3 max-md:h-3"
           >
@@ -81,4 +76,36 @@ import 'swiper/css/pagination'
   </section>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+:deep(.swiper:not(.swiper-initialized) .swiper-wrapper) {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+  .swiper-slide {
+    display: none;
+    &:first-child {
+      display: block;
+    }
+  }
+}
+@media screen and (min-width: 640px) {
+  :deep(.swiper:not(.swiper-initialized) .swiper-wrapper) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .swiper-slide {
+      display: block;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  :deep(.swiper:not(.swiper-initialized) .swiper-wrapper) {
+    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    .swiper-slide:last-child {
+      display: block;
+    }
+  }
+}
+</style>

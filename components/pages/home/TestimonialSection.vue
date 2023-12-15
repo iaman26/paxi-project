@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-
 interface ITestimonialProps {
   logo: string
   content: string
@@ -82,7 +78,7 @@ defineProps({
               :pagination="{
                 dynamicBullets: true,
               }"
-              :modules="[Pagination]"
+              :modules="[SwiperPagination]"
               class="mySwiper"
             >
               <swiper-slide

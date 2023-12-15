@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
 const aboutUs = [
   {
     number: '1560+',
@@ -56,7 +53,7 @@ const aboutUs = [
       <div
         class="relative mt-12 flex justify-between max-md:mt-8 max-md:flex-wrap"
       >
-        <swiper
+        <Swiper
           :slides-per-view="1"
           :space-between="20"
           :breakpoints="{
@@ -72,19 +69,19 @@ const aboutUs = [
           :pagination="{
             type: 'progressbar',
           }"
-          :modules="[Pagination]"
-          class="mySwiper"
+          :modules="[SwiperPagination]"
         >
           <swiper-slide v-for="(_, index) in 3" :key="index">
             <UiImage
               :src="`/about-${index + 1}.png`"
+              alt="About image"
+              preload
               w="1"
               h="1"
-              alt="About image"
             >
             </UiImage>
           </swiper-slide>
-        </swiper>
+        </Swiper>
         <div
           class="absolute -right-5 top-0 flex h-full w-5 flex-col max-md:hidden"
         >
@@ -133,4 +130,4 @@ const aboutUs = [
   </section>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
