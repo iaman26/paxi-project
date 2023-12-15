@@ -14,6 +14,7 @@ const features = [
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
     image: '/feature-1.png',
+    slug: 'technical-support',
   },
   {
     featureName: 'Development',
@@ -22,6 +23,7 @@ const features = [
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
     image: '/feature-2.png',
+    slug: 'development',
   },
   {
     featureName: 'AWS/Azure ',
@@ -30,6 +32,7 @@ const features = [
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
     image: '/feature-3.png',
+    slug: 'aws/azure',
   },
   {
     featureName: 'Consulting',
@@ -37,6 +40,7 @@ const features = [
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
     image: '/feature-4.png',
+    slug: 'consulting',
   },
   {
     featureName: 'Information Technology',
@@ -45,6 +49,7 @@ const features = [
     description:
       'Through True Rich Attended does no end it his mother since real had half every him case in packages enquire we up ecstatic unsatiable saw his giving Remain expense you position concluded. Through True Rich Attended does no end it his mother since real had half every.',
     image: '/feature-5.png',
+    slug: 'information-technology',
   },
 ]
 
@@ -87,10 +92,21 @@ const processes = [
   },
 ]
 
+const route = useRoute()
+
 const handleScrollToFeature = (index: number) => {
+  console.log(index)
   const element = featureRefs[index].featureRef
   element?.scrollIntoView({ behavior: 'smooth' })
 }
+
+onMounted(() => {
+  const featureIdx = features.findIndex(
+    (feature) => feature.slug === route.query.slug
+  )
+  if (featureIdx <= -1) return
+  nextTick(() => handleScrollToFeature(featureIdx))
+})
 
 definePageMeta({
   title: 'Service',

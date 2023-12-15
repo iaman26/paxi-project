@@ -1,5 +1,117 @@
+<script setup lang="ts">
+import { menuList } from '@/constants'
+
+const socialMediaLinks = [
+  {
+    icon: 'mdi:facebook',
+    href: '#',
+  },
+  {
+    icon: 'mdi:twitter',
+    href: '#',
+  },
+  {
+    icon: 'mdi:instagram',
+    href: '#',
+  },
+  {
+    icon: 'mdi:linkedin',
+    href: '#',
+  },
+]
+
+interface IServiceList {
+  title: string
+  to: object
+}
+
+interface IResourcesList {
+  title: string
+  to: string
+}
+
+const serviceList: Array<IServiceList> = [
+  {
+    title: 'Technical support',
+    to: {
+      name: 'service',
+      query: {
+        slug: 'technical-support',
+      },
+    },
+  },
+  {
+    title: 'Testing',
+    to: {
+      name: 'service',
+      query: {
+        slug: 'development',
+      },
+    },
+  },
+  {
+    title: 'Development',
+    to: {
+      name: 'service',
+      query: {
+        slug: 'aws/azure',
+      },
+    },
+  },
+  {
+    title: 'AWS/Azure',
+    to: {
+      name: 'service',
+      query: {
+        slug: 'technical-support',
+      },
+    },
+  },
+  {
+    title: 'Consulting',
+    to: {
+      name: 'service',
+      query: {
+        slug: 'consulting',
+      },
+    },
+  },
+  {
+    title: 'Information Technology',
+    to: {
+      name: 'service',
+      query: {
+        slug: 'information-technology',
+      },
+    },
+  },
+]
+const resourceList: Array<IResourcesList> = [
+  {
+    title: 'About Us',
+    to: '/',
+  },
+  {
+    title: 'Testimonial',
+    to: '/service',
+  },
+  {
+    title: 'Privacy Policy',
+    to: '/company',
+  },
+  {
+    title: 'Term of use',
+    to: '/career',
+  },
+  {
+    title: 'Blog',
+    to: '/blog',
+  },
+]
+</script>
+
 <template>
-  <footer>
+  <footer class="pt-12">
     <div class="mb-8 px-[5%] lg:px-[7%] xl:px-[10%]">
       <div class="h-[52px] w-12">
         <Icon name="PaxiDecorReverse" filled></Icon>
@@ -125,87 +237,5 @@
     </div>
   </footer>
 </template>
-
-<script setup lang="ts">
-import { menuList } from '@/constants'
-
-const socialMediaLinks = [
-  {
-    icon: 'mdi:facebook',
-    href: '#',
-  },
-  {
-    icon: 'mdi:twitter',
-    href: '#',
-  },
-  {
-    icon: 'mdi:instagram',
-    href: '#',
-  },
-  {
-    icon: 'mdi:linkedin',
-    href: '#',
-  },
-]
-
-interface IServiceList {
-  title: string
-  to: string
-}
-
-interface IResourcesList {
-  title: string
-  to: string
-}
-
-const serviceList: Array<IServiceList> = [
-  {
-    title: 'Technical support',
-    to: '/',
-  },
-  {
-    title: 'Testing',
-    to: '/service',
-  },
-  {
-    title: 'Development',
-    to: '/company',
-  },
-  {
-    title: 'AWS/Azure',
-    to: '/career',
-  },
-  {
-    title: 'Consulting',
-    to: '/blog',
-  },
-  {
-    title: 'Information Technology',
-    to: '/contact',
-  },
-]
-const resourceList: Array<IResourcesList> = [
-  {
-    title: 'About Us',
-    to: '/',
-  },
-  {
-    title: 'Testimonial',
-    to: '/service',
-  },
-  {
-    title: 'Privacy Policy',
-    to: '/company',
-  },
-  {
-    title: 'Term of use',
-    to: '/career',
-  },
-  {
-    title: 'Blog',
-    to: '/blog',
-  },
-]
-</script>
 
 <style scoped></style>
