@@ -47,15 +47,25 @@
       <div
         class="mt-14 flex items-center justify-between gap-5 max-md:flex-wrap"
       >
-        <div class="flex flex-col">
+        <div class="mr-8 flex flex-col">
           <p
             class="whitespace-nowrap text-sm font-medium leading-5 text-white opacity-80"
           >
             Our Clients
           </p>
-          <p class="mt-2 text-lg font-medium leading-7 text-white">
+          <p
+            class="mt-2 whitespace-nowrap text-lg font-medium leading-7 text-white"
+          >
             We've Worked with
           </p>
+        </div>
+
+        <div
+          class="scrollbar-hide flex w-full items-center gap-8 overflow-x-scroll"
+        >
+          <div v-for="(_, index) in 5" :key="index" class="h-24 w-40">
+            <Icon :name="`PaxiLogo${index + 1}`" color="white"></Icon>
+          </div>
         </div>
       </div>
     </div>

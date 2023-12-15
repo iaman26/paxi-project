@@ -85,13 +85,13 @@ const aboutUs = [
       <div
         class="mt-10 flex flex-col items-center justify-center bg-gray-50 px-5 xl:mt-24 xl:px-16"
       >
-        <header class="header">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fc74eb69fc449d42b6452f7728c3a65a1e636b5756b98441bca05b60170ebc1?apiKey=9f58f52e78cb4d4dabb0d3f527a69620&"
-            class="aspect-[10.01] w-full max-w-[1061px] overflow-hidden object-contain object-center max-md:max-w-full"
-          />
-        </header>
+        <div
+          class="scrollbar-hide flex w-full items-center gap-8 overflow-x-scroll"
+        >
+          <div v-for="(_, index) in 5" :key="index" class="h-24 w-40">
+            <Icon :name="`PaxiLogo${index + 1}`" color="black"></Icon>
+          </div>
+        </div>
       </div>
     </div>
   </section>
