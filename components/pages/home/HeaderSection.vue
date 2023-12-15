@@ -27,6 +27,7 @@
               :alt="`Home image`"
               w="3"
               h="4"
+              preload
               class="w-full grow"
             >
             </UiImage>

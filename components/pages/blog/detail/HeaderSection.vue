@@ -44,7 +44,7 @@ defineProps({
           </header>
           <div class="mt-3 flex items-center">
             <div class="h-8 w-8">
-              <UiImage :src="blog.avatar" :alt="`Avatar ${blog.title}`">
+              <UiImage :src="blog.avatar" :alt="`Avatar ${blog.title}`" preload>
               </UiImage>
             </div>
             <span

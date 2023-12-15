@@ -14,7 +14,7 @@
       fit="cover"
       :loading="!!preload ? 'eager' : 'lazy'"
       :preload="preload"
-      placeholder="/img-placeholder.png"
+      :placeholder="src"
       :alt="props.alt"
       @load="onLoad"
     />

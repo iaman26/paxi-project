@@ -52,7 +52,7 @@ onMounted(() => {
         img-size="xs:40px sm:40px md:40px 40px"
         alt="Logo"
         class="w-10"
-        preload
+        :preload="true"
       ></UiImage>
       <div class="md:hidden">
         <Icon
