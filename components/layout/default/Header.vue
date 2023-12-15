@@ -102,8 +102,7 @@ onMounted(() => {
           h="1"
           img-size="xs:40px sm:40px md:40px 40px"
           alt="Paxi Company"
-          class="aspect-square w-10 max-w-full shrink-0 overflow-hidden object-contain object-center"
-          preload
+          class="w-10"
         ></UiImage>
         <span>Paxi Company</span>
       </div>
